@@ -1,0 +1,14 @@
+case_id: case-10
+title: CloudTrail log validation disabled
+aws_resource: aws_cloudtrail
+security_category: audit_integrity
+vulnerability_description: CloudTrail log file integrity validation is disabled.
+security_impact: Tampering with delivered log files may be harder to detect.
+ground_truth_expectation: vulnerable=true; secure=false
+expected_vulnerable_result: Detect disabled log file validation.
+expected_corrected_result: No finding for the benchmark issue.
+cwe_mapping: CWE-693 (Protection Mechanism Failure)
+cis_aws_foundations_mapping: 3.3
+mapping_justification: CIS 3.3 directly addresses CloudTrail log validation.
+scanner_finding_ids: { checkov: not_tested, trivy: not_tested, kics: not_tested }
+notes_and_limitations: The destination bucket is fictional and has no deployment policy.

@@ -1,0 +1,14 @@
+case_id: case-01
+title: Public S3 access
+aws_resource: aws_s3_bucket and aws_s3_bucket_policy
+security_category: access_control
+vulnerability_description: A bucket policy grants anonymous s3:GetObject access and no public-access block is configured.
+security_impact: Internet users may read objects intended to remain private.
+ground_truth_expectation: vulnerable=true; secure=false
+expected_vulnerable_result: Detect public bucket policy and missing public-access block.
+expected_corrected_result: No finding for the benchmark issue.
+cwe_mapping: CWE-732 (Incorrect Permission Assignment for Critical Resource)
+cis_aws_foundations_mapping: S3.1; S3.8
+mapping_justification: CIS controls directly address bucket public-access blocking; CWE-732 covers insecure permission assignment.
+scanner_finding_ids: { checkov: not_tested, trivy: not_tested, kics: not_tested }
+notes_and_limitations: Fictional bucket; no deployment or live AWS validation.

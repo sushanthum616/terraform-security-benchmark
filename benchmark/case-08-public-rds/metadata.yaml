@@ -1,0 +1,14 @@
+case_id: case-08
+title: Public RDS
+aws_resource: aws_db_instance
+security_category: network_exposure
+vulnerability_description: The database instance is configured as publicly accessible.
+security_impact: Database network exposure increases attack surface and data-access risk.
+ground_truth_expectation: vulnerable=true; secure=false
+expected_vulnerable_result: Detect publicly accessible RDS instance.
+expected_corrected_result: No finding for the benchmark issue.
+cwe_mapping: CWE-284 (Improper Access Control)
+cis_aws_foundations_mapping: RDS.2
+mapping_justification: RDS.2 directly requires DB instances to prohibit public access.
+scanner_finding_ids: { checkov: not_tested, trivy: not_tested, kics: not_tested }
+notes_and_limitations: Credentials are dummy literals solely to satisfy static provider schema examples; no deployment is permitted.

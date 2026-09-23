@@ -1,0 +1,14 @@
+case_id: case-11
+title: CloudTrail without KMS encryption
+aws_resource: aws_cloudtrail
+security_category: data_protection
+vulnerability_description: CloudTrail is configured without a customer-managed KMS key.
+security_impact: The benchmark does not require a customer-managed key for every trail, but key-control coverage is reduced.
+ground_truth_expectation: vulnerable=true; secure=false
+expected_vulnerable_result: Detect missing KMS key only if the scanner rule explicitly checks this configuration.
+expected_corrected_result: No finding for the benchmark issue.
+cwe_mapping: CWE-311 (Missing Encryption of Sensitive Data)
+cis_aws_foundations_mapping: not_applicable
+mapping_justification: CIS AWS Foundations does not universally require a customer-managed KMS key for every CloudTrail trail; this is deliberately not mapped.
+scanner_finding_ids: { checkov: not_tested, trivy: not_tested, kics: not_tested }
+notes_and_limitations: This case tests a narrower hardening preference, not a universal CIS failure.

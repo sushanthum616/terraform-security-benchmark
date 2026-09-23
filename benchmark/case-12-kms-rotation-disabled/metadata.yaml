@@ -1,0 +1,14 @@
+case_id: case-12
+title: KMS key rotation disabled
+aws_resource: aws_kms_key
+security_category: key_management
+vulnerability_description: Automatic annual key rotation is disabled.
+security_impact: Long-lived key material increases cryptoperiod and key-management risk.
+ground_truth_expectation: vulnerable=true; secure=false
+expected_vulnerable_result: Detect disabled automatic key rotation.
+expected_corrected_result: No finding for the benchmark issue.
+cwe_mapping: CWE-320 (Key Management Errors)
+cis_aws_foundations_mapping: KMS.4
+mapping_justification: KMS.4 directly requires automatic key rotation.
+scanner_finding_ids: { checkov: not_tested, trivy: not_tested, kics: not_tested }
+notes_and_limitations: Key material is never created because Terraform is not deployed.

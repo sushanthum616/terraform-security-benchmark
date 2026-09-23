@@ -1,0 +1,14 @@
+case_id: case-07
+title: Unencrypted EBS
+aws_resource: aws_ebs_volume
+security_category: data_protection
+vulnerability_description: EBS volume encryption is explicitly disabled.
+security_impact: Volume data may be readable if underlying storage or snapshots are exposed.
+ground_truth_expectation: vulnerable=true; secure=false
+expected_vulnerable_result: Detect unencrypted EBS volume.
+expected_corrected_result: No finding for the benchmark issue.
+cwe_mapping: CWE-311 (Missing Encryption of Sensitive Data)
+cis_aws_foundations_mapping: not_applicable
+mapping_justification: No direct CIS AWS Foundations control was selected for standalone EBS volume encryption.
+scanner_finding_ids: { checkov: not_tested, trivy: not_tested, kics: not_tested }
+notes_and_limitations: Availability zone is a fictional static value and is not queried.

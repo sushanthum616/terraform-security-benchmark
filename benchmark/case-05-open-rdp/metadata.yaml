@@ -1,0 +1,14 @@
+case_id: case-05
+title: Open RDP
+aws_resource: aws_security_group
+security_category: network_exposure
+vulnerability_description: TCP port 3389 is allowed from 0.0.0.0/0.
+security_impact: Remote desktop administration is exposed to the entire IPv4 internet.
+ground_truth_expectation: vulnerable=true; secure=false
+expected_vulnerable_result: Detect unrestricted RDP ingress.
+expected_corrected_result: No finding for the benchmark issue.
+cwe_mapping: CWE-284 (Improper Access Control)
+cis_aws_foundations_mapping: 5.2
+mapping_justification: CIS 5.2 covers unrestricted remote administration ports, including RDP.
+scanner_finding_ids: { checkov: not_tested, trivy: not_tested, kics: not_tested }
+notes_and_limitations: Corrected CIDR uses documentation-only TEST-NET space.

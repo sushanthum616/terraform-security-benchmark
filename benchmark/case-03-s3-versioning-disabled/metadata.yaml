@@ -1,0 +1,14 @@
+case_id: case-03
+title: S3 versioning disabled
+aws_resource: aws_s3_bucket
+security_category: resilience
+vulnerability_description: Bucket versioning is explicitly suspended.
+security_impact: Accidental deletion or overwrite recovery is reduced.
+ground_truth_expectation: vulnerable=true; secure=false
+expected_vulnerable_result: Detect disabled bucket versioning.
+expected_corrected_result: No finding for the benchmark issue.
+cwe_mapping: CWE-693 (Protection Mechanism Failure)
+cis_aws_foundations_mapping: not_applicable
+mapping_justification: No directly applicable CIS AWS Foundations control was selected for generic S3 versioning.
+scanner_finding_ids: { checkov: not_tested, trivy: not_tested, kics: not_tested }
+notes_and_limitations: Versioning improves recoverability but is not a substitute for backup design.

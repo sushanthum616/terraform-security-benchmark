@@ -1,0 +1,14 @@
+case_id: case-06
+title: Wildcard IAM permissions
+aws_resource: aws_iam_policy
+security_category: access_control
+vulnerability_description: The policy allows every action on every resource.
+security_impact: A principal receiving this policy could make arbitrary AWS API changes.
+ground_truth_expectation: vulnerable=true; secure=false
+expected_vulnerable_result: Detect wildcard action and resource permissions.
+expected_corrected_result: No finding for the benchmark issue.
+cwe_mapping: CWE-269 (Improper Privilege Management)
+cis_aws_foundations_mapping: not_applicable
+mapping_justification: The selected CIS AWS Foundations release does not expose a directly equivalent wildcard-policy control; least privilege remains a security best practice outside this mapping.
+scanner_finding_ids: { checkov: not_tested, trivy: not_tested, kics: not_tested }
+notes_and_limitations: Corrected policy is intentionally narrow and references a fictional ARN.

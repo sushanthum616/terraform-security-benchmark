@@ -1,0 +1,13 @@
+case_id,title,resource,category,cwe,cis_aws_foundations,expected_issue
+case-01,Public S3 access,aws_s3_bucket and policy,access control,CWE-732,S3.1; S3.8,Public read policy and missing public-access block
+case-02,S3 without encryption,aws_s3_bucket,data protection,CWE-311,not_applicable,No default encryption
+case-03,S3 versioning disabled,aws_s3_bucket,data protection,CWE-693,not_applicable,Versioning disabled
+case-04,Open SSH,aws_security_group,network exposure,CWE-284,5.2,Port 22 from 0.0.0.0/0
+case-05,Open RDP,aws_security_group,network exposure,CWE-284,5.2,Port 3389 from 0.0.0.0/0
+case-06,Wildcard IAM,aws_iam_policy,access control,CWE-269,not_applicable,IAM policy allows * actions/resources
+case-07,Unencrypted EBS,aws_ebs_volume,data protection,CWE-311,not_applicable,EBS encryption disabled
+case-08,Public RDS,aws_db_instance,network exposure,CWE-284,RDS.2,RDS publicly accessible
+case-09,Unencrypted RDS,aws_db_instance,data protection,CWE-311,RDS.3,RDS storage encryption disabled
+case-10,CloudTrail validation disabled,aws_cloudtrail,audit integrity,CWE-693,3.3,Log file validation disabled
+case-11,CloudTrail without KMS,aws_cloudtrail,data protection,CWE-311,not_applicable,No customer-managed KMS key
+case-12,KMS rotation disabled,aws_kms_key,key management,CWE-320,KMS.4,Automatic key rotation disabled

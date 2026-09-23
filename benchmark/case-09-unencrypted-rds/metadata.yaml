@@ -1,0 +1,14 @@
+case_id: case-09
+title: Unencrypted RDS
+aws_resource: aws_db_instance
+security_category: data_protection
+vulnerability_description: Storage encryption is explicitly disabled.
+security_impact: Database storage and snapshots may lack encryption at rest.
+ground_truth_expectation: vulnerable=true; secure=false
+expected_vulnerable_result: Detect missing RDS storage encryption.
+expected_corrected_result: No finding for the benchmark issue.
+cwe_mapping: CWE-311 (Missing Encryption of Sensitive Data)
+cis_aws_foundations_mapping: RDS.3
+mapping_justification: RDS.3 directly requires encryption at rest.
+scanner_finding_ids: { checkov: not_tested, trivy: not_tested, kics: not_tested }
+notes_and_limitations: Dummy database inputs are never used against AWS.
