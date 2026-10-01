@@ -1,0 +1,437 @@
+CASE=case-01-public-s3
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Duplicate required providers configuration
+
+  on vulnerable.tf line 2, in terraform:
+   2:   required_providers {
+
+A module may have only one required providers configuration. The required
+providers were previously configured at secure.tf:2,3-21.
+
+Error: Duplicate provider configuration
+
+  on vulnerable.tf line 10:
+  10: provider "aws" {
+
+A default (non-aliased) provider configuration for "aws" was already given at
+secure.tf:10,1-15. If multiple configurations are required, set the "alias"
+argument for alternative configurations.
+
+Error: Duplicate resource "aws_s3_bucket" configuration
+
+  on vulnerable.tf line 14:
+  14: resource "aws_s3_bucket" "benchmark" {
+
+A aws_s3_bucket resource named "benchmark" was already declared at
+secure.tf:14,1-37. Resource names must be unique per type in each module.
+CASE=case-02-s3-no-encryption
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Duplicate required providers configuration
+
+  on vulnerable.tf line 2, in terraform:
+   2:   required_providers {
+
+A module may have only one required providers configuration. The required
+providers were previously configured at secure.tf:2,3-21.
+
+Error: Duplicate provider configuration
+
+  on vulnerable.tf line 10:
+  10: provider "aws" {
+
+A default (non-aliased) provider configuration for "aws" was already given at
+secure.tf:10,1-15. If multiple configurations are required, set the "alias"
+argument for alternative configurations.
+
+Error: Duplicate resource "aws_s3_bucket" configuration
+
+  on vulnerable.tf line 14:
+  14: resource "aws_s3_bucket" "benchmark" {
+
+A aws_s3_bucket resource named "benchmark" was already declared at
+secure.tf:14,1-37. Resource names must be unique per type in each module.
+CASE=case-03-s3-versioning-disabled
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Duplicate required providers configuration
+
+  on vulnerable.tf line 2, in terraform:
+   2:   required_providers {
+
+A module may have only one required providers configuration. The required
+providers were previously configured at secure.tf:2,3-21.
+
+Error: Duplicate provider configuration
+
+  on vulnerable.tf line 10:
+  10: provider "aws" {
+
+A default (non-aliased) provider configuration for "aws" was already given at
+secure.tf:10,1-15. If multiple configurations are required, set the "alias"
+argument for alternative configurations.
+
+Error: Duplicate resource "aws_s3_bucket" configuration
+
+  on vulnerable.tf line 14:
+  14: resource "aws_s3_bucket" "benchmark" {
+
+A aws_s3_bucket resource named "benchmark" was already declared at
+secure.tf:14,1-37. Resource names must be unique per type in each module.
+
+Error: Duplicate resource "aws_s3_bucket_versioning" configuration
+
+  on vulnerable.tf line 17:
+  17: resource "aws_s3_bucket_versioning" "benchmark" {
+
+A aws_s3_bucket_versioning resource named "benchmark" was already declared at
+secure.tf:17,1-48. Resource names must be unique per type in each module.
+CASE=case-04-open-ssh
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Duplicate required providers configuration
+
+  on vulnerable.tf line 2, in terraform:
+   2:   required_providers {
+
+A module may have only one required providers configuration. The required
+providers were previously configured at secure.tf:2,3-21.
+
+Error: Duplicate provider configuration
+
+  on vulnerable.tf line 10:
+  10: provider "aws" {
+
+A default (non-aliased) provider configuration for "aws" was already given at
+secure.tf:10,1-15. If multiple configurations are required, set the "alias"
+argument for alternative configurations.
+
+Error: Duplicate resource "aws_security_group" configuration
+
+  on vulnerable.tf line 14:
+  14: resource "aws_security_group" "benchmark" {
+
+A aws_security_group resource named "benchmark" was already declared at
+secure.tf:14,1-42. Resource names must be unique per type in each module.
+CASE=case-05-open-rdp
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Duplicate required providers configuration
+
+  on vulnerable.tf line 2, in terraform:
+   2:   required_providers {
+
+A module may have only one required providers configuration. The required
+providers were previously configured at secure.tf:2,3-21.
+
+Error: Duplicate provider configuration
+
+  on vulnerable.tf line 10:
+  10: provider "aws" {
+
+A default (non-aliased) provider configuration for "aws" was already given at
+secure.tf:10,1-15. If multiple configurations are required, set the "alias"
+argument for alternative configurations.
+
+Error: Duplicate resource "aws_security_group" configuration
+
+  on vulnerable.tf line 14:
+  14: resource "aws_security_group" "benchmark" {
+
+A aws_security_group resource named "benchmark" was already declared at
+secure.tf:14,1-42. Resource names must be unique per type in each module.
+CASE=case-06-wildcard-iam
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Duplicate required providers configuration
+
+  on vulnerable.tf line 2, in terraform:
+   2:   required_providers {
+
+A module may have only one required providers configuration. The required
+providers were previously configured at secure.tf:2,3-21.
+
+Error: Duplicate provider configuration
+
+  on vulnerable.tf line 10:
+  10: provider "aws" {
+
+A default (non-aliased) provider configuration for "aws" was already given at
+secure.tf:10,1-15. If multiple configurations are required, set the "alias"
+argument for alternative configurations.
+
+Error: Duplicate resource "aws_iam_policy" configuration
+
+  on vulnerable.tf line 14:
+  14: resource "aws_iam_policy" "benchmark" {
+
+A aws_iam_policy resource named "benchmark" was already declared at
+secure.tf:14,1-38. Resource names must be unique per type in each module.
+CASE=case-07-unencrypted-ebs
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Duplicate required providers configuration
+
+  on vulnerable.tf line 2, in terraform:
+   2:   required_providers {
+
+A module may have only one required providers configuration. The required
+providers were previously configured at secure.tf:2,3-21.
+
+Error: Duplicate provider configuration
+
+  on vulnerable.tf line 10:
+  10: provider "aws" {
+
+A default (non-aliased) provider configuration for "aws" was already given at
+secure.tf:10,1-15. If multiple configurations are required, set the "alias"
+argument for alternative configurations.
+
+Error: Duplicate resource "aws_ebs_volume" configuration
+
+  on vulnerable.tf line 14:
+  14: resource "aws_ebs_volume" "benchmark" {
+
+A aws_ebs_volume resource named "benchmark" was already declared at
+secure.tf:14,1-38. Resource names must be unique per type in each module.
+CASE=case-08-public-rds
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Duplicate required providers configuration
+
+  on vulnerable.tf line 2, in terraform:
+   2:   required_providers {
+
+A module may have only one required providers configuration. The required
+providers were previously configured at secure.tf:2,3-21.
+
+Error: Duplicate provider configuration
+
+  on vulnerable.tf line 10:
+  10: provider "aws" {
+
+A default (non-aliased) provider configuration for "aws" was already given at
+secure.tf:10,1-15. If multiple configurations are required, set the "alias"
+argument for alternative configurations.
+
+Error: Duplicate variable declaration
+
+  on vulnerable.tf line 14:
+  14: variable "benchmark_password" {
+
+A variable named "benchmark_password" was already declared at
+secure.tf:14,1-30. Variable names must be unique within a module.
+
+Error: Duplicate resource "aws_db_instance" configuration
+
+  on vulnerable.tf line 18:
+  18: resource "aws_db_instance" "benchmark" {
+
+A aws_db_instance resource named "benchmark" was already declared at
+secure.tf:18,1-39. Resource names must be unique per type in each module.
+CASE=case-09-unencrypted-rds
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Duplicate required providers configuration
+
+  on vulnerable.tf line 2, in terraform:
+   2:   required_providers {
+
+A module may have only one required providers configuration. The required
+providers were previously configured at secure.tf:2,3-21.
+
+Error: Duplicate provider configuration
+
+  on vulnerable.tf line 10:
+  10: provider "aws" {
+
+A default (non-aliased) provider configuration for "aws" was already given at
+secure.tf:10,1-15. If multiple configurations are required, set the "alias"
+argument for alternative configurations.
+
+Error: Duplicate variable declaration
+
+  on vulnerable.tf line 14:
+  14: variable "benchmark_password" {
+
+A variable named "benchmark_password" was already declared at
+secure.tf:14,1-30. Variable names must be unique within a module.
+
+Error: Duplicate resource "aws_db_instance" configuration
+
+  on vulnerable.tf line 18:
+  18: resource "aws_db_instance" "benchmark" {
+
+A aws_db_instance resource named "benchmark" was already declared at
+secure.tf:18,1-39. Resource names must be unique per type in each module.
+CASE=case-10-cloudtrail-validation-disabled
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Duplicate required providers configuration
+
+  on vulnerable.tf line 2, in terraform:
+   2:   required_providers {
+
+A module may have only one required providers configuration. The required
+providers were previously configured at secure.tf:2,3-21.
+
+Error: Duplicate provider configuration
+
+  on vulnerable.tf line 10:
+  10: provider "aws" {
+
+A default (non-aliased) provider configuration for "aws" was already given at
+secure.tf:10,1-15. If multiple configurations are required, set the "alias"
+argument for alternative configurations.
+
+Error: Duplicate resource "aws_s3_bucket" configuration
+
+  on vulnerable.tf line 14:
+  14: resource "aws_s3_bucket" "logs" {
+
+A aws_s3_bucket resource named "logs" was already declared at
+secure.tf:14,1-32. Resource names must be unique per type in each module.
+
+Error: Duplicate resource "aws_cloudtrail" configuration
+
+  on vulnerable.tf line 17:
+  17: resource "aws_cloudtrail" "benchmark" {
+
+A aws_cloudtrail resource named "benchmark" was already declared at
+secure.tf:17,1-38. Resource names must be unique per type in each module.
+CASE=case-11-cloudtrail-no-kms
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Duplicate required providers configuration
+
+  on vulnerable.tf line 2, in terraform:
+   2:   required_providers {
+
+A module may have only one required providers configuration. The required
+providers were previously configured at secure.tf:2,3-21.
+
+Error: Duplicate provider configuration
+
+  on vulnerable.tf line 10:
+  10: provider "aws" {
+
+A default (non-aliased) provider configuration for "aws" was already given at
+secure.tf:10,1-15. If multiple configurations are required, set the "alias"
+argument for alternative configurations.
+
+Error: Duplicate resource "aws_s3_bucket" configuration
+
+  on vulnerable.tf line 14:
+  14: resource "aws_s3_bucket" "logs" {
+
+A aws_s3_bucket resource named "logs" was already declared at
+secure.tf:14,1-32. Resource names must be unique per type in each module.
+
+Error: Duplicate resource "aws_cloudtrail" configuration
+
+  on vulnerable.tf line 17:
+  17: resource "aws_cloudtrail" "benchmark" {
+
+A aws_cloudtrail resource named "benchmark" was already declared at
+secure.tf:21,1-38. Resource names must be unique per type in each module.
+CASE=case-12-kms-rotation-disabled
+
+Error: Terraform encountered problems during initialisation, including problems
+with the configuration, described below.
+
+The Terraform configuration must be valid before initialization so that
+Terraform can determine which modules and providers need to be installed.
+
+
+Error: Duplicate required providers configuration
+
+  on vulnerable.tf line 2, in terraform:
+   2:   required_providers {
+
+A module may have only one required providers configuration. The required
+providers were previously configured at secure.tf:2,3-21.
+
+Error: Duplicate provider configuration
+
+  on vulnerable.tf line 10:
+  10: provider "aws" {
+
+A default (non-aliased) provider configuration for "aws" was already given at
+secure.tf:10,1-15. If multiple configurations are required, set the "alias"
+argument for alternative configurations.
+
+Error: Duplicate resource "aws_kms_key" configuration
+
+  on vulnerable.tf line 14:
+  14: resource "aws_kms_key" "benchmark" {
+
+A aws_kms_key resource named "benchmark" was already declared at
+secure.tf:14,1-35. Resource names must be unique per type in each module.
+overall_exit_status=1

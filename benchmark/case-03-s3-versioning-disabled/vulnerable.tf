@@ -1,4 +1,23 @@
-terraform { required_providers { aws = { source = "hashicorp/aws", version = "~> 5.0" } } }
-provider "aws" { region = "us-east-1" }
-resource "aws_s3_bucket" "benchmark" { bucket = "benchmark-fictional-no-versioning" }
-resource "aws_s3_bucket_versioning" "benchmark" { bucket = aws_s3_bucket.benchmark.id; versioning_configuration { status = "Suspended" } }
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_s3_bucket" "benchmark" {
+  bucket = "benchmark-fictional-no-versioning"
+}
+resource "aws_s3_bucket_versioning" "benchmark" {
+  bucket = aws_s3_bucket.benchmark.id
+  versioning_configuration {
+    status = "Suspended"
+  }
+}
+

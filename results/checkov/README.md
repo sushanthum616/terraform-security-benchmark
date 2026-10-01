@@ -1,1 +1,1 @@
-Scanner output not yet available: Checkov was not found on PATH during initial setup.
+Checkov 3.3.22 ran in Docker. Raw JSON is preserved in checkov-raw.json and all.json/results_json.json; human-readable output is preserved in scan-human.txt and human.txt/results_cli.txt. See scan-meta.txt for exit status and duration.

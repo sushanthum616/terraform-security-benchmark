@@ -1,0 +1,2 @@
+exit_status=60
+duration_seconds=30.2972673

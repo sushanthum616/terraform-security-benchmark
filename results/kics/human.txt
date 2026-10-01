@@ -1,0 +1,1311 @@
+[38;2;34;187;51m
+                                                                                                                                                   
+                                                                                                                                                                                                    
+   MLLLLLM             MLLLLLLLLL   LLLLLLL             KLLLLLLLLLLLLLLLL       LLLLLLLLLLLLLLLLLLLLLLL 
+   MMMMMMM           MMMMMMMMMML    MMMMMMMK       LMMMMMMMMMMMMMMMMMMMML   KLMMMMMMMMMMMMMMMMMMMMMMMMM 
+   MMMMMMM         MMMMMMMMML       MMMMMMMK     LMMMMMMMMMMMMMMMMMMMMMML  LMMMMMMMMMMMMMMMMMMMMMMMMMMM 
+   MMMMMMM      MMMMMMMMMML         MMMMMMMK   LMMMMMMMMMMMMMMMMMMMMMMMML LMMMMMMMMMMMMMMMMMMMMMMMMMMMM 
+   MMMMMMM    LMMMMMMMMML           MMMMMMMK  LMMMMMMMMMLLMLLLLLLLLLLLLLL LMMMMMMMLLLLLLLLLLLLLLLLLLLLM 
+   MMMMMMM  MMMMMMMMMLM             MMMMMMMK LMMMMMMMM                    LMMMMMML                      
+   MMMMMMMLMMMMMMMML                MMMMMMMK MMMMMMML                     LMMMMMMMMLLLLLLLLLLLLLMLL     
+   MMMMMMMMMMMMMMMM                 MMMMMMMK MMMMMML                       LMMMMMMMMMMMMMMMMMMMMMMMMML  
+   MMMMMMMMMMMMMMMMMM               MMMMMMMK MMMMMMM                         LMMMMMMMMMMMMMMMMMMMMMMMML 
+   MMMMMMM KLMMMMMMMMML             MMMMMMMK LMMMMMMM                                          MMMMMMMML
+   MMMMMMM    LMMMMMMMMMM           MMMMMMMK LMMMMMMMMLL                                        MMMMMMML
+   MMMMMMM      LMMMMMMMMMLL        MMMMMMMK  LMMMMMMMMMMMMMMMMMMMMMMMMML LLLLLLLLLLLLLLLLLLLLMMMMMMMMMM
+   MMMMMMM        MMMMMMMMMMML      MMMMMMMK   MMMMMMMMMMMMMMMMMMMMMMMMML LMMMMMMMMMMMMMMMMMMMMMMMMMMMM 
+   MMMMMMM          LLMMMMMMMMML    MMMMMMMK     LLMMMMMMMMMMMMMMMMMMMMML LMMMMMMMMMMMMMMMMMMMMMMMMMML  
+   MMMMMMM             MMMMMMMMMML  MMMMMMMK         KLMMMMMMMMMMMMMMMMML LMMMMMMMMMMMMMMMMMMMMMMMLK    
+                                                                                                            
+                                                                                                                                                                                                                                                                                                                        
+
+[0m
+Scanning with Keeping Infrastructure as Code Secure v2.1.20
+
+
+
+
+
+[38;2;91;192;222mVariable Without Description[0m, Severity: [38;2;91;192;222mINFO[0m, Results: 4
+[1mDescription:[0m All variables should contain a valid description.
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 710
+[1mRisk Score:[0m 0.0
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/2a153952-2544-4687-bcc9-cc8fea814a9b
+
+	[38;2;91;192;222m[1]:[0m ../../tf/benchmark/case-09-unencrypted-rds/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: variable "benchmark_password" {
+[0m		015:   type      = string
+
+
+	[38;2;91;192;222m[2]:[0m ../../tf/benchmark/case-08-public-rds/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: variable "benchmark_password" {
+[0m		015:   type      = string
+
+
+	[38;2;91;192;222m[3]:[0m ../../tf/benchmark/case-08-public-rds/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: variable "benchmark_password" {
+[0m		015:   type      = string
+
+
+	[38;2;91;192;222m[4]:[0m ../../tf/benchmark/case-09-unencrypted-rds/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: variable "benchmark_password" {
+[0m		015:   type      = string
+
+
+[38;2;91;192;222mSecurity Group Rule Without Description[0m, Severity: [38;2;91;192;222mINFO[0m, Results: 4
+[1mDescription:[0m It's considered a best practice for all rules in AWS Security Group to have a description
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 710
+[1mRisk Score:[0m 0.0
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/68eb4bf3-f9bf-463d-b5cf-e029bb446d2e
+
+	[38;2;91;192;222m[1]:[0m ../../tf/benchmark/case-05-open-rdp/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016:   description = "Benchmark only"
+[38;2;240;173;78m		017:   ingress {
+[0m		018:     from_port   = 3389
+
+
+	[38;2;91;192;222m[2]:[0m ../../tf/benchmark/case-05-open-rdp/secure.tf:[38;2;34;187;51m17[0m
+
+		016:   description = "Benchmark only"
+[38;2;240;173;78m		017:   ingress {
+[0m		018:     from_port   = 3389
+
+
+	[38;2;91;192;222m[3]:[0m ../../tf/benchmark/case-04-open-ssh/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016:   description = "Benchmark only"
+[38;2;240;173;78m		017:   ingress {
+[0m		018:     from_port   = 22
+
+
+	[38;2;91;192;222m[4]:[0m ../../tf/benchmark/case-04-open-ssh/secure.tf:[38;2;34;187;51m17[0m
+
+		016:   description = "Benchmark only"
+[38;2;240;173;78m		017:   ingress {
+[0m		018:     from_port   = 22
+
+
+[38;2;91;192;222mSecurity Group Not Used[0m, Severity: [38;2;91;192;222mINFO[0m, Results: 4
+[1mDescription:[0m Security group must be used or not declared
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 284
+[1mRisk Score:[0m 0.0
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/4849211b-ac39-479e-ae78-5694d506cb24
+
+	[38;2;91;192;222m[1]:[0m ../../tf/benchmark/case-04-open-ssh/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_security_group" "benchmark" {
+[0m		015:   name        = "benchmark-fictional-restricted-ssh"
+
+
+	[38;2;91;192;222m[2]:[0m ../../tf/benchmark/case-05-open-rdp/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_security_group" "benchmark" {
+[0m		015:   name        = "benchmark-fictional-restricted-rdp"
+
+
+	[38;2;91;192;222m[3]:[0m ../../tf/benchmark/case-05-open-rdp/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_security_group" "benchmark" {
+[0m		015:   name        = "benchmark-fictional-open-rdp"
+
+
+	[38;2;91;192;222m[4]:[0m ../../tf/benchmark/case-04-open-ssh/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_security_group" "benchmark" {
+[0m		015:   name        = "benchmark-fictional-open-ssh"
+
+
+[38;2;91;192;222mResource Not Using Tags[0m, Severity: [38;2;91;192;222mINFO[0m, Results: 29
+[1mDescription:[0m AWS services resource tags are an essential part of managing components. As a best practice, the field 'tags' should have additional tags defined other than 'Name'
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 665
+[1mRisk Score:[0m 0.0
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/e38a8e0a-b88b-4902-b3fe-b0fcb17d5c10
+
+	[38;2;91;192;222m[1]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/secure.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name                       = "benchmark-fictional-trail"
+
+
+	[38;2;91;192;222m[2]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-logs"
+
+
+	[38;2;91;192;222m[3]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-no-kms-logs"
+
+
+	[38;2;91;192;222m[4]:[0m ../../tf/benchmark/case-12-kms-rotation-disabled/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_kms_key" "benchmark" {
+[0m		015:   description         = "Fictional benchmark key"
+
+
+	[38;2;91;192;222m[5]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/secure.tf:[38;2;34;187;51m21[0m
+
+		020: }
+[38;2;240;173;78m		021: resource "aws_cloudtrail" "benchmark" {
+[0m		022:   name                          = "benchmark-fictional-kms"
+
+
+	[38;2;91;192;222m[6]:[0m ../../tf/benchmark/case-07-unencrypted-ebs/vulnerable.tf:[38;2;34;187;51m18[0m
+
+		017:   encrypted         = false
+[38;2;240;173;78m		018:   tags              = { Name = "benchmark-fictional-ebs" }
+[0m		019: }
+
+
+	[38;2;91;192;222m[7]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-kms-logs"
+
+
+	[38;2;91;192;222m[8]:[0m ../../tf/benchmark/case-04-open-ssh/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_security_group" "benchmark" {
+[0m		015:   name        = "benchmark-fictional-open-ssh"
+
+
+	[38;2;91;192;222m[9]:[0m ../../tf/benchmark/case-08-public-rds/vulnerable.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-public-db"
+
+
+	[38;2;91;192;222m[10]:[0m ../../tf/benchmark/case-01-public-s3/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-public-access"
+
+
+	[38;2;91;192;222m[11]:[0m ../../tf/benchmark/case-03-s3-versioning-disabled/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-versioned"
+
+
+	[38;2;91;192;222m[12]:[0m ../../tf/benchmark/case-06-wildcard-iam/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_iam_policy" "benchmark" {
+[0m		015:   name = "benchmark-fictional-least-privilege"
+
+
+	[38;2;91;192;222m[13]:[0m ../../tf/benchmark/case-05-open-rdp/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_security_group" "benchmark" {
+[0m		015:   name        = "benchmark-fictional-open-rdp"
+
+
+	[38;2;91;192;222m[14]:[0m ../../tf/benchmark/case-09-unencrypted-rds/secure.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-encrypted"
+
+
+	[38;2;91;192;222m[15]:[0m ../../tf/benchmark/case-03-s3-versioning-disabled/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-no-versioning"
+
+
+	[38;2;91;192;222m[16]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name                       = "benchmark-fictional-trail"
+
+
+	[38;2;91;192;222m[17]:[0m ../../tf/benchmark/case-01-public-s3/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-private-access"
+
+
+	[38;2;91;192;222m[18]:[0m ../../tf/benchmark/case-06-wildcard-iam/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_iam_policy" "benchmark" {
+[0m		015:   name = "benchmark-fictional-wildcard"
+
+
+	[38;2;91;192;222m[19]:[0m ../../tf/benchmark/case-02-s3-no-encryption/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-encrypted"
+
+
+	[38;2;91;192;222m[20]:[0m ../../tf/benchmark/case-02-s3-no-encryption/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-no-encryption"
+
+
+	[38;2;91;192;222m[21]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name           = "benchmark-fictional-no-kms"
+
+
+	[38;2;91;192;222m[22]:[0m ../../tf/benchmark/case-07-unencrypted-ebs/secure.tf:[38;2;34;187;51m18[0m
+
+		017:   encrypted         = true
+[38;2;240;173;78m		018:   tags              = { Name = "benchmark-fictional-ebs" }
+[0m		019: }
+
+
+	[38;2;91;192;222m[23]:[0m ../../tf/benchmark/case-12-kms-rotation-disabled/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_kms_key" "benchmark" {
+[0m		015:   description         = "Fictional benchmark key"
+
+
+	[38;2;91;192;222m[24]:[0m ../../tf/benchmark/case-04-open-ssh/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_security_group" "benchmark" {
+[0m		015:   name        = "benchmark-fictional-restricted-ssh"
+
+
+	[38;2;91;192;222m[25]:[0m ../../tf/benchmark/case-05-open-rdp/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_security_group" "benchmark" {
+[0m		015:   name        = "benchmark-fictional-restricted-rdp"
+
+
+	[38;2;91;192;222m[26]:[0m ../../tf/benchmark/case-09-unencrypted-rds/vulnerable.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-no-encryption"
+
+
+	[38;2;91;192;222m[27]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/secure.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_kms_key" "logs" {
+[0m		018:   description         = "Fictional benchmark log key"
+
+
+	[38;2;91;192;222m[28]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-logs"
+
+
+	[38;2;91;192;222m[29]:[0m ../../tf/benchmark/case-08-public-rds/secure.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-private-db"
+
+
+[38;2;237;213;126mTags Not Copied to RDS Cluster Snapshot[0m, Severity: [38;2;237;213;126mLOW[0m, Results: 4
+[1mDescription:[0m Tags of the RDS Cluster should be copied to the respective snapshots to ensure that snapshots retain important metadata for identification, cost allocation, and resource management
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 284
+[1mRisk Score:[0m 1.0
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/6d3dead4-c6b2-4db7-81bd-3a83eae8f255
+
+	[38;2;237;213;126m[1]:[0m ../../tf/benchmark/case-09-unencrypted-rds/vulnerable.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-no-encryption"
+
+
+	[38;2;237;213;126m[2]:[0m ../../tf/benchmark/case-08-public-rds/secure.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-private-db"
+
+
+	[38;2;237;213;126m[3]:[0m ../../tf/benchmark/case-08-public-rds/vulnerable.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-public-db"
+
+
+	[38;2;237;213;126m[4]:[0m ../../tf/benchmark/case-09-unencrypted-rds/secure.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-encrypted"
+
+
+[38;2;237;213;126mS3 Bucket Without Enabled MFA Delete[0m, Severity: [38;2;237;213;126mLOW[0m, Results: 3
+[1mDescription:[0m S3 bucket without MFA Delete Enabled. MFA delete cannot be enabled through Terraform, it can be done by adding a MFA device (https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable.html) and enabling versioning and MFA delete by using AWS CLI: 'aws s3api put-bucket-versioning --versioning-configuration=Status=Enabled,MFADelete=Enabled --bucket=<BUCKET_NAME> --mfa=<MFA_SERIAL_NUMBER>'. Please, also notice that MFA delete can not be used with lifecycle configurations
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 710
+[1mRisk Score:[0m 3.8
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/c5b31ab9-0f26-4a49-b8aa-4cc064392f4d
+
+	[38;2;237;213;126m[1]:[0m ../../tf/benchmark/case-03-s3-versioning-disabled/vulnerable.tf:[38;2;34;187;51m20[0m
+
+		019:   versioning_configuration {
+[38;2;240;173;78m		020:     status = "Suspended"
+[0m		021:   }
+
+
+	[38;2;237;213;126m[2]:[0m ../../tf/benchmark/case-03-s3-versioning-disabled/vulnerable.tf:[38;2;34;187;51m19[0m
+
+		018:   bucket = aws_s3_bucket.benchmark.id
+[38;2;240;173;78m		019:   versioning_configuration {
+[0m		020:     status = "Suspended"
+
+
+	[38;2;237;213;126m[3]:[0m ../../tf/benchmark/case-03-s3-versioning-disabled/secure.tf:[38;2;34;187;51m19[0m
+
+		018:   bucket = aws_s3_bucket.benchmark.id
+[38;2;240;173;78m		019:   versioning_configuration {
+[0m		020:     status = "Enabled"
+
+
+[38;2;237;213;126mLambda IAM InvokeFunction Misconfigured[0m, Severity: [38;2;237;213;126mLOW[0m, Results: 1
+[1mDescription:[0m Lambda permission may be misconfigured if the action field is not filled in by 'lambda:InvokeFunction'
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 710
+[1mRisk Score:[0m 2.3
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/0ca1017d-3b80-423e-bb9c-6cd5898d34bd
+
+	[38;2;237;213;126m[1]:[0m ../../tf/benchmark/case-06-wildcard-iam/vulnerable.tf:[38;2;34;187;51m16[0m
+
+		015:   name = "benchmark-fictional-wildcard"
+[38;2;240;173;78m		016:   policy = jsonencode({
+[0m		017:     Version = "2012-10-17"
+
+
+[38;2;237;213;126mIAM Access Analyzer Not Enabled[0m, Severity: [38;2;237;213;126mLOW[0m, Results: 24
+[1mDescription:[0m IAM Access Analyzer should be enabled and configured to continuously monitor resource permissions
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 710
+[1mRisk Score:[0m 3.5
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/e592a0c5-5bdb-414c-9066-5dba7cdea370
+
+	[38;2;237;213;126m[1]:[0m ../../tf/benchmark/case-04-open-ssh/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_security_group" "benchmark" {
+[0m		015:   name        = "benchmark-fictional-open-ssh"
+
+
+	[38;2;237;213;126m[2]:[0m ../../tf/benchmark/case-03-s3-versioning-disabled/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-no-versioning"
+
+
+	[38;2;237;213;126m[3]:[0m ../../tf/benchmark/case-02-s3-no-encryption/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-no-encryption"
+
+
+	[38;2;237;213;126m[4]:[0m ../../tf/benchmark/case-08-public-rds/secure.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-private-db"
+
+
+	[38;2;237;213;126m[5]:[0m ../../tf/benchmark/case-07-unencrypted-ebs/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_ebs_volume" "benchmark" {
+[0m		015:   availability_zone = "us-east-1a"
+
+
+	[38;2;237;213;126m[6]:[0m ../../tf/benchmark/case-01-public-s3/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-public-access"
+
+
+	[38;2;237;213;126m[7]:[0m ../../tf/benchmark/case-05-open-rdp/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_security_group" "benchmark" {
+[0m		015:   name        = "benchmark-fictional-open-rdp"
+
+
+	[38;2;237;213;126m[8]:[0m ../../tf/benchmark/case-04-open-ssh/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_security_group" "benchmark" {
+[0m		015:   name        = "benchmark-fictional-restricted-ssh"
+
+
+	[38;2;237;213;126m[9]:[0m ../../tf/benchmark/case-06-wildcard-iam/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_iam_policy" "benchmark" {
+[0m		015:   name = "benchmark-fictional-wildcard"
+
+
+	[38;2;237;213;126m[10]:[0m ../../tf/benchmark/case-01-public-s3/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-private-access"
+
+
+	[38;2;237;213;126m[11]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-logs"
+
+
+	[38;2;237;213;126m[12]:[0m ../../tf/benchmark/case-09-unencrypted-rds/secure.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-encrypted"
+
+
+	[38;2;237;213;126m[13]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-no-kms-logs"
+
+
+	[38;2;237;213;126m[14]:[0m ../../tf/benchmark/case-08-public-rds/vulnerable.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-public-db"
+
+
+	[38;2;237;213;126m[15]:[0m ../../tf/benchmark/case-02-s3-no-encryption/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-encrypted"
+
+
+	[38;2;237;213;126m[16]:[0m ../../tf/benchmark/case-09-unencrypted-rds/vulnerable.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-no-encryption"
+
+
+	[38;2;237;213;126m[17]:[0m ../../tf/benchmark/case-12-kms-rotation-disabled/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_kms_key" "benchmark" {
+[0m		015:   description         = "Fictional benchmark key"
+
+
+	[38;2;237;213;126m[18]:[0m ../../tf/benchmark/case-06-wildcard-iam/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_iam_policy" "benchmark" {
+[0m		015:   name = "benchmark-fictional-least-privilege"
+
+
+	[38;2;237;213;126m[19]:[0m ../../tf/benchmark/case-05-open-rdp/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_security_group" "benchmark" {
+[0m		015:   name        = "benchmark-fictional-restricted-rdp"
+
+
+	[38;2;237;213;126m[20]:[0m ../../tf/benchmark/case-03-s3-versioning-disabled/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-versioned"
+
+
+	[38;2;237;213;126m[21]:[0m ../../tf/benchmark/case-12-kms-rotation-disabled/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_kms_key" "benchmark" {
+[0m		015:   description         = "Fictional benchmark key"
+
+
+	[38;2;237;213;126m[22]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-logs"
+
+
+	[38;2;237;213;126m[23]:[0m ../../tf/benchmark/case-07-unencrypted-ebs/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_ebs_volume" "benchmark" {
+[0m		015:   availability_zone = "us-east-1a"
+
+
+	[38;2;237;213;126m[24]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-kms-logs"
+
+
+[38;2;237;213;126mCloudTrail SNS Topic Name Undefined[0m, Severity: [38;2;237;213;126mLOW[0m, Results: 4
+[1mDescription:[0m Check if SNS topic name is set for CloudTrail
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 703
+[1mRisk Score:[0m 3.6
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/482b7d26-0bdb-4b5f-bf6f-545826c0a3dd
+
+	[38;2;237;213;126m[1]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/secure.tf:[38;2;34;187;51m21[0m
+
+		020: }
+[38;2;240;173;78m		021: resource "aws_cloudtrail" "benchmark" {
+[0m		022:   name                          = "benchmark-fictional-kms"
+
+
+	[38;2;237;213;126m[2]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/secure.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name                       = "benchmark-fictional-trail"
+
+
+	[38;2;237;213;126m[3]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name                       = "benchmark-fictional-trail"
+
+
+	[38;2;237;213;126m[4]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name           = "benchmark-fictional-no-kms"
+
+
+[38;2;237;213;126mCloudTrail Not Integrated With CloudWatch[0m, Severity: [38;2;237;213;126mLOW[0m, Results: 8
+[1mDescription:[0m CloudTrail should be integrated with CloudWatch
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 778
+[1mRisk Score:[0m 3.9
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/17b30f8f-8dfb-4597-adf6-57600b6cf25e
+
+	[38;2;237;213;126m[1]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/secure.tf:[38;2;34;187;51m21[0m
+
+		020: }
+[38;2;240;173;78m		021: resource "aws_cloudtrail" "benchmark" {
+[0m		022:   name                          = "benchmark-fictional-kms"
+
+
+	[38;2;237;213;126m[2]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/secure.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name                       = "benchmark-fictional-trail"
+
+
+	[38;2;237;213;126m[3]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name           = "benchmark-fictional-no-kms"
+
+
+	[38;2;237;213;126m[4]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name                       = "benchmark-fictional-trail"
+
+
+	[38;2;237;213;126m[5]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name                       = "benchmark-fictional-trail"
+
+
+	[38;2;237;213;126m[6]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/secure.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name                       = "benchmark-fictional-trail"
+
+
+	[38;2;237;213;126m[7]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/secure.tf:[38;2;34;187;51m21[0m
+
+		020: }
+[38;2;240;173;78m		021: resource "aws_cloudtrail" "benchmark" {
+[0m		022:   name                          = "benchmark-fictional-kms"
+
+
+	[38;2;237;213;126m[8]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name           = "benchmark-fictional-no-kms"
+
+
+[38;2;237;213;126mCloudTrail Multi Region Disabled[0m, Severity: [38;2;237;213;126mLOW[0m, Results: 4
+[1mDescription:[0m CloudTrail multi region should be enabled, which means attributes 'is_multi_region_trail' and 'include_global_service_events' should be enabled
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 778
+[1mRisk Score:[0m 2.8
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/8173d5eb-96b5-4aa6-a71b-ecfa153c123d
+
+	[38;2;237;213;126m[1]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/secure.tf:[38;2;34;187;51m23[0m
+
+		022:   include_global_service_events = true
+[38;2;240;173;78m		023:   is_multi_region_trail         = false
+[0m		024: }
+
+
+	[38;2;237;213;126m[2]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/secure.tf:[38;2;34;187;51m26[0m
+
+		025:   include_global_service_events = true
+[38;2;240;173;78m		026:   is_multi_region_trail         = false
+[0m		027: }
+
+
+	[38;2;237;213;126m[3]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/vulnerable.tf:[38;2;34;187;51m23[0m
+
+		022:   include_global_service_events = true
+[38;2;240;173;78m		023:   is_multi_region_trail         = false
+[0m		024: }
+
+
+	[38;2;237;213;126m[4]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/vulnerable.tf:[38;2;34;187;51m23[0m
+
+		022:   include_global_service_events = true
+[38;2;240;173;78m		023:   is_multi_region_trail         = false
+[0m		024: }
+
+
+[38;2;237;213;126mCloudTrail Log Files Not Encrypted With KMS[0m, Severity: [38;2;237;213;126mLOW[0m, Results: 3
+[1mDescription:[0m Logs delivered by CloudTrail should be encrypted using KMS to increase security of your CloudTrail
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 326
+[1mRisk Score:[0m 2.0
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/5d9e3164-9265-470c-9a10-57ae454ac0c7
+
+	[38;2;237;213;126m[1]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name                       = "benchmark-fictional-trail"
+
+
+	[38;2;237;213;126m[2]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name           = "benchmark-fictional-no-kms"
+
+
+	[38;2;237;213;126m[3]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/secure.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name                       = "benchmark-fictional-trail"
+
+
+[38;2;237;213;126mCloudTrail Log File Validation Disabled[0m, Severity: [38;2;237;213;126mLOW[0m, Results: 3
+[1mDescription:[0m CloudTrail log file validation should be enabled to determine whether a log file has not been tampered
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 778
+[1mRisk Score:[0m 2.8
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/52ffcfa6-6c70-4ea6-8376-d828d3961669
+
+	[38;2;237;213;126m[1]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/vulnerable.tf:[38;2;34;187;51m20[0m
+
+		019:   s3_bucket_name             = aws_s3_bucket.logs.id
+[38;2;240;173;78m		020:   enable_log_file_validation = false
+[0m		021: 
+
+
+	[38;2;237;213;126m[2]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_cloudtrail" "benchmark" {
+[0m		018:   name           = "benchmark-fictional-no-kms"
+
+
+	[38;2;237;213;126m[3]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/secure.tf:[38;2;34;187;51m21[0m
+
+		020: }
+[38;2;240;173;78m		021: resource "aws_cloudtrail" "benchmark" {
+[0m		022:   name                          = "benchmark-fictional-kms"
+
+
+[38;2;237;213;126mCMK Rotation Disabled[0m, Severity: [38;2;237;213;126mLOW[0m, Results: 1
+[1mDescription:[0m Customer Master Keys (CMK) must have rotation enabled, which means the attribute 'enable_key_rotation' must be set to 'true' when the key is enabled.
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 326
+[1mRisk Score:[0m 1.4
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/22fbfeac-7b5a-421a-8a27-7a2178bb910b
+
+	[38;2;237;213;126m[1]:[0m ../../tf/benchmark/case-12-kms-rotation-disabled/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_kms_key" "benchmark" {
+[0m		015:   description         = "Fictional benchmark key"
+
+
+[38;2;255;114;19mSecurity Group With Unrestricted Access To SSH[0m, Severity: [38;2;255;114;19mMEDIUM[0m, Results: 1
+[1mDescription:[0m 'SSH' (TCP:22) should not be public in AWS Security Group
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 732
+[1mRisk Score:[0m 5.2
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/65905cec-d691-4320-b320-2000436cb696
+
+	[38;2;255;114;19m[1]:[0m ../../tf/benchmark/case-04-open-ssh/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016:   description = "Benchmark only"
+[38;2;240;173;78m		017:   ingress {
+[0m		018:     from_port   = 22
+
+
+[38;2;255;114;19mS3 Bucket Without Versioning[0m, Severity: [38;2;255;114;19mMEDIUM[0m, Results: 5
+[1mDescription:[0m S3 bucket should have versioning enabled
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 710
+[1mRisk Score:[0m 5.7
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/568a4d22-3517-44a6-a7ad-6a7eed88722c
+
+	[38;2;255;114;19m[1]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-logs"
+
+
+	[38;2;255;114;19m[2]:[0m ../../tf/benchmark/case-03-s3-versioning-disabled/vulnerable.tf:[38;2;34;187;51m20[0m
+
+		019:   versioning_configuration {
+[38;2;240;173;78m		020:     status = "Suspended"
+[0m		021:   }
+
+
+	[38;2;255;114;19m[3]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-kms-logs"
+
+
+	[38;2;255;114;19m[4]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-logs"
+
+
+	[38;2;255;114;19m[5]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-no-kms-logs"
+
+
+[38;2;255;114;19mS3 Bucket Policy Accepts HTTP Requests[0m, Severity: [38;2;255;114;19mMEDIUM[0m, Results: 1
+[1mDescription:[0m S3 Bucket policy should not accept HTTP Requests
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 319
+[1mRisk Score:[0m 6.8
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/4bc4dd4c-7d8d-405e-a0fb-57fa4c31b4d9
+
+	[38;2;255;114;19m[1]:[0m ../../tf/benchmark/case-01-public-s3/vulnerable.tf:[38;2;34;187;51m19[0m
+
+		018:   bucket = aws_s3_bucket.benchmark.id
+[38;2;240;173;78m		019:   policy = jsonencode({
+[0m		020:     Version = "2012-10-17"
+
+
+[38;2;255;114;19mS3 Bucket Logging Disabled[0m, Severity: [38;2;255;114;19mMEDIUM[0m, Results: 10
+[1mDescription:[0m Server Access Logging should be enabled on S3 Buckets so that all changes are logged and trackable
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 778
+[1mRisk Score:[0m 5.1
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/f861041c-8c9f-4156-acfc-5e6e524f5884
+
+	[38;2;255;114;19m[1]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-logs"
+
+
+	[38;2;255;114;19m[2]:[0m ../../tf/benchmark/case-02-s3-no-encryption/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-encrypted"
+
+
+	[38;2;255;114;19m[3]:[0m ../../tf/benchmark/case-02-s3-no-encryption/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-no-encryption"
+
+
+	[38;2;255;114;19m[4]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-logs"
+
+
+	[38;2;255;114;19m[5]:[0m ../../tf/benchmark/case-01-public-s3/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-private-access"
+
+
+	[38;2;255;114;19m[6]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-no-kms-logs"
+
+
+	[38;2;255;114;19m[7]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-kms-logs"
+
+
+	[38;2;255;114;19m[8]:[0m ../../tf/benchmark/case-03-s3-versioning-disabled/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-versioned"
+
+
+	[38;2;255;114;19m[9]:[0m ../../tf/benchmark/case-03-s3-versioning-disabled/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-no-versioning"
+
+
+	[38;2;255;114;19m[10]:[0m ../../tf/benchmark/case-01-public-s3/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "benchmark" {
+[0m		015:   bucket = "benchmark-fictional-public-access"
+
+
+[38;2;255;114;19mRDS Without Logging[0m, Severity: [38;2;255;114;19mMEDIUM[0m, Results: 4
+[1mDescription:[0m RDS does not have any kind of logger
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 778
+[1mRisk Score:[0m 5.1
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/8d7f7b8c-6c7c-40f8-baa6-62006c6c7b56
+
+	[38;2;255;114;19m[1]:[0m ../../tf/benchmark/case-08-public-rds/vulnerable.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-public-db"
+
+
+	[38;2;255;114;19m[2]:[0m ../../tf/benchmark/case-09-unencrypted-rds/vulnerable.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-no-encryption"
+
+
+	[38;2;255;114;19m[3]:[0m ../../tf/benchmark/case-09-unencrypted-rds/secure.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-encrypted"
+
+
+	[38;2;255;114;19m[4]:[0m ../../tf/benchmark/case-08-public-rds/secure.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-private-db"
+
+
+[38;2;255;114;19mRDS With Backup Disabled[0m, Severity: [38;2;255;114;19mMEDIUM[0m, Results: 4
+[1mDescription:[0m Make sure the AWS RDS configuration has automatic backup configured. If the retention period is equal to 0 there is no backup
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 754
+[1mRisk Score:[0m 5.4
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/1dc73fb4-5b51-430c-8c5f-25dcf9090b02
+
+	[38;2;255;114;19m[1]:[0m ../../tf/benchmark/case-09-unencrypted-rds/secure.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-encrypted"
+
+
+	[38;2;255;114;19m[2]:[0m ../../tf/benchmark/case-09-unencrypted-rds/vulnerable.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-no-encryption"
+
+
+	[38;2;255;114;19m[3]:[0m ../../tf/benchmark/case-08-public-rds/secure.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-private-db"
+
+
+	[38;2;255;114;19m[4]:[0m ../../tf/benchmark/case-08-public-rds/vulnerable.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-public-db"
+
+
+[38;2;255;114;19mIAM policy allows for data exfiltration[0m, Severity: [38;2;255;114;19mMEDIUM[0m, Results: 2
+[1mDescription:[0m This policy contains actions that can retrieve information unrestricted and could lead to data exfiltration
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 200
+[1mRisk Score:[0m 3.0
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/ba2ed23b-52d3-45ca-be25-f6c358d45abd
+
+	[38;2;255;114;19m[1]:[0m ../../tf/benchmark/case-06-wildcard-iam/vulnerable.tf:[38;2;34;187;51m16[0m
+
+		015:   name = "benchmark-fictional-wildcard"
+[38;2;240;173;78m		016:   policy = jsonencode({
+[0m		017:     Version = "2012-10-17"
+
+
+	[38;2;255;114;19m[2]:[0m ../../tf/benchmark/case-06-wildcard-iam/secure.tf:[38;2;34;187;51m16[0m
+
+		015:   name = "benchmark-fictional-least-privilege"
+[38;2;240;173;78m		016:   policy = jsonencode({
+[0m		017:     Version = "2012-10-17"
+
+
+[38;2;255;114;19mIAM Policies With Full Privileges[0m, Severity: [38;2;255;114;19mMEDIUM[0m, Results: 1
+[1mDescription:[0m IAM policies shouldn't allow full administrative privileges (for all resources)
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 284
+[1mRisk Score:[0m 6.8
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/2f37c4a3-58b9-4afe-8a87-d7f1d2286f84
+
+	[38;2;255;114;19m[1]:[0m ../../tf/benchmark/case-06-wildcard-iam/vulnerable.tf:[38;2;34;187;51m16[0m
+
+		015:   name = "benchmark-fictional-wildcard"
+[38;2;240;173;78m		016:   policy = jsonencode({
+[0m		017:     Version = "2012-10-17"
+
+
+[38;2;255;114;19mIAM Database Auth Not Enabled[0m, Severity: [38;2;255;114;19mMEDIUM[0m, Results: 4
+[1mDescription:[0m IAM Database Auth Enabled should be configured to true when using compatible engine and version
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 285
+[1mRisk Score:[0m 5.9
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/88fd05e0-ac0e-43d2-ba6d-fc0ba60ae1a6
+
+	[38;2;255;114;19m[1]:[0m ../../tf/benchmark/case-08-public-rds/secure.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-private-db"
+
+
+	[38;2;255;114;19m[2]:[0m ../../tf/benchmark/case-09-unencrypted-rds/secure.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-encrypted"
+
+
+	[38;2;255;114;19m[3]:[0m ../../tf/benchmark/case-09-unencrypted-rds/vulnerable.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-no-encryption"
+
+
+	[38;2;255;114;19m[4]:[0m ../../tf/benchmark/case-08-public-rds/vulnerable.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-public-db"
+
+
+[38;2;255;114;19mCloudTrail Log Files S3 Bucket with Logging Disabled[0m, Severity: [38;2;255;114;19mMEDIUM[0m, Results: 4
+[1mDescription:[0m CloudTrail Log Files S3 Bucket should have 'logging' enabled
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 778
+[1mRisk Score:[0m 6.4
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/ee9e50e8-b2ed-4176-ad42-8fc0cf7593f4
+
+	[38;2;255;114;19m[1]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-no-kms-logs"
+
+
+	[38;2;255;114;19m[2]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-logs"
+
+
+	[38;2;255;114;19m[3]:[0m ../../tf/benchmark/case-10-cloudtrail-validation-disabled/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-logs"
+
+
+	[38;2;255;114;19m[4]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_s3_bucket" "logs" {
+[0m		015:   bucket = "benchmark-fictional-trail-kms-logs"
+
+
+[38;2;187;33;36mUnrestricted Security Group Ingress[0m, Severity: [38;2;187;33;36mHIGH[0m, Results: 2
+[1mDescription:[0m Security groups allow ingress from 0.0.0.0:0 and/or ::/0
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 668
+[1mRisk Score:[0m 7.2
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/4728cd65-a20c-49da-8b31-9c08b423e4db
+
+	[38;2;187;33;36m[1]:[0m ../../tf/benchmark/case-04-open-ssh/vulnerable.tf:[38;2;34;187;51m21[0m
+
+		020:     protocol    = "tcp"
+[38;2;240;173;78m		021:     cidr_blocks = ["0.0.0.0/0"]
+[0m		022:   }
+
+
+	[38;2;187;33;36m[2]:[0m ../../tf/benchmark/case-05-open-rdp/vulnerable.tf:[38;2;34;187;51m21[0m
+
+		020:     protocol    = "tcp"
+[38;2;240;173;78m		021:     cidr_blocks = ["0.0.0.0/0"]
+[0m		022:   }
+
+
+[38;2;187;33;36mSensitive Port Is Exposed To Entire Network[0m, Severity: [38;2;187;33;36mHIGH[0m, Results: 2
+[1mDescription:[0m A sensitive port, such as port 23 or port 110, is open for the whole network in either TCP or UDP protocol
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 200
+[1mRisk Score:[0m 7.7
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/381c3f2a-ef6f-4eff-99f7-b169cda3422c
+
+	[38;2;187;33;36m[1]:[0m ../../tf/benchmark/case-05-open-rdp/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016:   description = "Benchmark only"
+[38;2;240;173;78m		017:   ingress {
+[0m		018:     from_port   = 3389
+
+
+	[38;2;187;33;36m[2]:[0m ../../tf/benchmark/case-04-open-ssh/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016:   description = "Benchmark only"
+[38;2;240;173;78m		017:   ingress {
+[0m		018:     from_port   = 22
+
+
+[38;2;187;33;36mS3 Bucket Allows Get Action From All Principals[0m, Severity: [38;2;187;33;36mHIGH[0m, Results: 1
+[1mDescription:[0m S3 Buckets must not allow Get Action From All Principals, as to prevent leaking private information to the entire internet or allow unauthorized data tampering / deletion. This means the 'Effect' must not be 'Allow' when the 'Action' is Get, for all Principals.
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 200
+[1mRisk Score:[0m 7.7
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/1df37f4b-7197-45ce-83f8-9994d2fcf885
+
+	[38;2;187;33;36m[1]:[0m ../../tf/benchmark/case-01-public-s3/vulnerable.tf:[38;2;34;187;51m24[0m
+
+		023:       Principal = "*"
+[38;2;240;173;78m		024:       Action    = "s3:GetObject"
+[0m		025:       Resource  = format("%s/*", aws_s3_bucket.benchmark.arn)
+
+
+[38;2;187;33;36mRemote Desktop Port Open To Internet[0m, Severity: [38;2;187;33;36mHIGH[0m, Results: 1
+[1mDescription:[0m The Remote Desktop port is open to the internet in a Security Group
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 668
+[1mRisk Score:[0m 7.7
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/151187cb-0efc-481c-babd-ad24e3c9bc22
+
+	[38;2;187;33;36m[1]:[0m ../../tf/benchmark/case-05-open-rdp/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016:   description = "Benchmark only"
+[38;2;240;173;78m		017:   ingress {
+[0m		018:     from_port   = 3389
+
+
+[38;2;187;33;36mKMS Key With Vulnerable Policy[0m, Severity: [38;2;187;33;36mHIGH[0m, Results: 3
+[1mDescription:[0m Checks if the policy is vulnerable and needs updating.
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 732
+[1mRisk Score:[0m 7.1
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/7ebc9038-0bde-479a-acc4-6ed7b6758899
+
+	[38;2;187;33;36m[1]:[0m ../../tf/benchmark/case-12-kms-rotation-disabled/secure.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_kms_key" "benchmark" {
+[0m		015:   description         = "Fictional benchmark key"
+
+
+	[38;2;187;33;36m[2]:[0m ../../tf/benchmark/case-12-kms-rotation-disabled/vulnerable.tf:[38;2;34;187;51m14[0m
+
+		013: 
+[38;2;240;173;78m		014: resource "aws_kms_key" "benchmark" {
+[0m		015:   description         = "Fictional benchmark key"
+
+
+	[38;2;187;33;36m[3]:[0m ../../tf/benchmark/case-11-cloudtrail-no-kms/secure.tf:[38;2;34;187;51m17[0m
+
+		016: }
+[38;2;240;173;78m		017: resource "aws_kms_key" "logs" {
+[0m		018:   description         = "Fictional benchmark log key"
+
+
+[38;2;187;33;36mIAM Policy Grants Full Permissions[0m, Severity: [38;2;187;33;36mHIGH[0m, Results: 1
+[1mDescription:[0m IAM policy should not grant full permissions to resources from the get-go, instead of granting permissions gradually as necessary.
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 732
+[1mRisk Score:[0m 8.0
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/575a2155-6af1-4026-b1af-d5bc8fe2a904
+
+	[38;2;187;33;36m[1]:[0m ../../tf/benchmark/case-06-wildcard-iam/vulnerable.tf:[38;2;34;187;51m16[0m
+
+		015:   name = "benchmark-fictional-wildcard"
+[38;2;240;173;78m		016:   policy = jsonencode({
+[0m		017:     Version = "2012-10-17"
+
+
+[38;2;187;33;36mEBS Volume Encryption Disabled[0m, Severity: [38;2;187;33;36mHIGH[0m, Results: 1
+[1mDescription:[0m EBS volumes should be encrypted
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 311
+[1mRisk Score:[0m 7.1
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/cc997676-481b-4e93-aa81-d19f8c5e9b12
+
+	[38;2;187;33;36m[1]:[0m ../../tf/benchmark/case-07-unencrypted-ebs/vulnerable.tf:[38;2;34;187;51m17[0m
+
+		016:   size              = 20
+[38;2;240;173;78m		017:   encrypted         = false
+[0m		018:   tags              = { Name = "benchmark-fictional-ebs" }
+
+
+[38;2;187;33;36mDB Instance Storage Not Encrypted[0m, Severity: [38;2;187;33;36mHIGH[0m, Results: 3
+[1mDescription:[0m AWS DB Instance should have its storage encrypted by setting the parameter to 'true'. The storage_encrypted default value is 'false'.
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 311
+[1mRisk Score:[0m 7.1
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/08bd0760-8752-44e1-9779-7bb369b2b4e4
+
+	[38;2;187;33;36m[1]:[0m ../../tf/benchmark/case-08-public-rds/vulnerable.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-public-db"
+
+
+	[38;2;187;33;36m[2]:[0m ../../tf/benchmark/case-08-public-rds/secure.tf:[38;2;34;187;51m18[0m
+
+		017: }
+[38;2;240;173;78m		018: resource "aws_db_instance" "benchmark" {
+[0m		019:   identifier          = "benchmark-fictional-private-db"
+
+
+	[38;2;187;33;36m[3]:[0m ../../tf/benchmark/case-09-unencrypted-rds/vulnerable.tf:[38;2;34;187;51m25[0m
+
+		024:   password            = var.benchmark_password
+[38;2;240;173;78m		025:   storage_encrypted   = false
+[0m		026:   skip_final_snapshot = true
+
+
+[38;2;255;0;0mS3 Bucket Access to Any Principal[0m, Severity: [38;2;255;0;0mCRITICAL[0m, Results: 1
+[1mDescription:[0m S3 Buckets must not allow Actions From All Principals, as to prevent leaking private information to the entire internet or allow unauthorized data tampering / deletion. This means the 'Effect' must not be 'Allow' when there are All Principals
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 284
+[1mRisk Score:[0m 8.8
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/7af43613-6bb9-4a0e-8c4d-1314b799425e
+
+	[38;2;255;0;0m[1]:[0m ../../tf/benchmark/case-01-public-s3/vulnerable.tf:[38;2;34;187;51m19[0m
+
+		018:   bucket = aws_s3_bucket.benchmark.id
+[38;2;240;173;78m		019:   policy = jsonencode({
+[0m		020:     Version = "2012-10-17"
+
+
+[38;2;255;0;0mRDS DB Instance Publicly Accessible[0m, Severity: [38;2;255;0;0mCRITICAL[0m, Results: 1
+[1mDescription:[0m RDS must not be defined with public interface, which means the field 'publicly_accessible' should not be set to 'true' (default is 'false').
+[1mPlatform:[0m Terraform
+[1mCWE:[0m 668
+[1mRisk Score:[0m 8.7
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/terraform-queries/aws/35113e6f-2c6b-414d-beec-7a9482d3b2d1
+
+	[38;2;255;0;0m[1]:[0m ../../tf/benchmark/case-08-public-rds/vulnerable.tf:[38;2;34;187;51m25[0m
+
+		024:   password            = var.benchmark_password
+[38;2;240;173;78m		025:   publicly_accessible = true
+[0m		026:   skip_final_snapshot = true
+
+
+
+Results Summary:
+[38;2;255;0;0mCRITICAL[0m: 2
+[38;2;187;33;36mHIGH[0m: 14
+[38;2;255;114;19mMEDIUM[0m: 36
+[38;2;237;213;126mLOW[0m: 55
+[38;2;91;192;222mINFO[0m: 41
+TOTAL: 148
+

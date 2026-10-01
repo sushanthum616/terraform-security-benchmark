@@ -35,8 +35,8 @@ Detection rate is true positives divided by the 12 benchmark issues. The compari
 
 ## Current status
 
-All 12 case pairs and standards metadata are present. The three priority cases are authored end to end at the source/metadata level. Scanner execution and normalization are pending because Checkov, Trivy, KICS, Terraform, and Python were not available on PATH in the initial environment.
+All 12 case pairs and standards metadata are present. Docker-based Terraform formatting passed, and Checkov, Trivy, and KICS scans completed over all cases. Raw results, scan metadata, normalized findings, and a generated comparison summary are present under results/. Terraform isolated validation is partially complete because repeated provider installation stalled in the container.
 
 ## Known limitations
 
-These are minimal static examples, not deployable applications. Scanner versions, rule packs, parser behavior, and provider schemas can change results. A CIS mapping is recorded only where a direct correspondence is defensible; otherwise it is `not_applicable`. No scanner finding is fabricated while scanners are unavailable.
+These are minimal static examples, not deployable applications. Scanner versions, rule packs, parser behavior, and provider schemas can change results. A CIS mapping is recorded only where a direct correspondence is defensible; otherwise it is not_applicable. Normalized classifications are heuristic and require manual review.

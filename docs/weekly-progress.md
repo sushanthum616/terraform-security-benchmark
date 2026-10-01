@@ -2,17 +2,24 @@
 
 ## Findings this week
 
-- The local workspace was initially empty.
-- The benchmark now contains 12 vulnerable/corrected Terraform pairs and standards-mapped metadata.
-- The three priority cases are ready for scanner execution.
-- Initial PATH inspection found Docker and Git, but not Terraform, Python, Checkov, Trivy, or KICS.
+- Docker Desktop was started and its local daemon became available.
+- Pinned Terraform, Checkov, Trivy, and KICS containers were downloaded and their versions and digests recorded.
+- Terraform formatting passed for all benchmark files.
+- Checkov, Trivy, and KICS scanned the complete benchmark tree. Raw JSON/SARIF and human-readable transcripts were preserved.
+- The normalization script produced 420 observed findings and the comparison summary was generated from those findings.
+- Validation exposed and corrected invalid HCL compression in the original files. Isolated validation successfully passed for the first vulnerable case; repeated provider installation then stalled for the remaining isolated modules.
 
 ## Improvements over the previous week
 
-This is the initial project setup, so there is no previous completed benchmark week to compare against.
+- The benchmark is now scanner-executable rather than only source-complete.
+- Scanner evidence is versioned by tool version, image digest, exit status, and duration.
+- Findings are normalized into one CSV schema with benchmark-case classifications.
+- Additional scanner findings are kept separate from benchmark true positives.
 
 ## Plan for next week
 
-- Install or provide pinned local scanner binaries/images.
-- Run the three priority cases first, preserve raw evidence, and normalize observed findings.
-- Run the remaining nine cases and complete the comparison summary.
+- Complete isolated Terraform validation using a persistent provider cache or host Terraform installation.
+- Manually review classifier matches, especially possible false positives and additional valid findings.
+- Refine benchmark examples where scanner parsing or case isolation affects interpretation.
+- Commit the corrected Terraform and evidence updates and push the next research snapshot.
+

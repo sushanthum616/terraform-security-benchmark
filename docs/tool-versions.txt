@@ -1,14 +1,18 @@
-Recorded 2026-09-23 (America/Los_Angeles)
+Recorded 2026-10-01 (America/Los_Angeles)
 
-Available on PATH at inspection:
-- Docker: 29.8.0 (client available; daemon access denied, no image execution performed)
+Host tools:
+- Docker client/daemon: 29.8.0
 - Git: 2.45.1.windows.1
 
-Not available on PATH at inspection:
-- Terraform
-- Python
-- Checkov
-- Trivy
-- KICS
+Pinned local container tools:
+- Terraform v1.10.5
+  - hashicorp/terraform@sha256:679ac5e095bf550bc726742cd12efa6050f0913080df479fdabfeb202953af28
+- Checkov 3.3.22
+  - bridgecrew/checkov@sha256:617c76e3f9b1f7907ebca9abb6b9d746844edcb48e9bd775e4692c69c1c6ac47
+- Trivy 0.75.0
+  - aquasec/trivy@sha256:af6acf9a6b85dfe389a1941505c0ce9efef52a4719635e1a962f022a3d855daa
+- KICS 2.1.20
+  - checkmarx/kics@sha256:3e5a268eb8adda2e5a483c9359ddfc4cd520ab856a7076dc0b1d8784a37e2602
 
-No scanner results were generated in this environment.
+All tools ran locally in Docker. No AWS CLI, AWS API, credentials, Terraform plan, apply, destroy, import, or refresh was used.
+

@@ -1,0 +1,2376 @@
+2026-10-01T20:56:31Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-10-01T20:56:31Z	INFO	[checks-client] Need to update the checks bundle
+2026-10-01T20:56:31Z	INFO	[checks-client] Downloading the checks bundle...
+234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.65 KiB / 234.65 KiB [---------------------------------------------] 100.00% 768.01 KiB p/s 500ms2026-10-01T20:56:36Z	INFO	[terraform scanner] Scanning root module	file_path="case-01-public-s3"
+2026-10-01T20:56:36Z	INFO	[terraform scanner] Scanning root module	file_path="case-02-s3-no-encryption"
+2026-10-01T20:56:36Z	INFO	[terraform scanner] Scanning root module	file_path="case-03-s3-versioning-disabled"
+2026-10-01T20:56:36Z	INFO	[terraform scanner] Scanning root module	file_path="case-04-open-ssh"
+2026-10-01T20:56:36Z	INFO	[terraform scanner] Scanning root module	file_path="case-05-open-rdp"
+2026-10-01T20:56:36Z	INFO	[terraform scanner] Scanning root module	file_path="case-06-wildcard-iam"
+2026-10-01T20:56:36Z	INFO	[terraform scanner] Scanning root module	file_path="case-07-unencrypted-ebs"
+2026-10-01T20:56:36Z	INFO	[terraform scanner] Scanning root module	file_path="case-08-public-rds"
+2026-10-01T20:56:36Z	WARN	[terraform parser] Variable values were not found in the environment or variable files. Evaluating may not work correctly.	module="root" variables="benchmark_password, benchmark_password"
+2026-10-01T20:56:36Z	INFO	[terraform scanner] Scanning root module	file_path="case-09-unencrypted-rds"
+2026-10-01T20:56:36Z	WARN	[terraform parser] Variable values were not found in the environment or variable files. Evaluating may not work correctly.	module="root" variables="benchmark_password, benchmark_password"
+2026-10-01T20:56:36Z	INFO	[terraform scanner] Scanning root module	file_path="case-10-cloudtrail-validation-disabled"
+2026-10-01T20:56:36Z	INFO	[terraform scanner] Scanning root module	file_path="case-11-cloudtrail-no-kms"
+2026-10-01T20:56:36Z	INFO	[terraform scanner] Scanning root module	file_path="case-12-kms-rotation-disabled"
+2026-10-01T20:56:38Z	INFO	Detected config files	num=33
+
+Report Summary
+
+┌──────────────────────────────────────────────────────┬───────────┬───────────────────┐
+│                        Target                        │   Type    │ Misconfigurations │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-01-public-s3                                    │ terraform │         0         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-01-public-s3/secure.tf                          │ terraform │         3         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-01-public-s3/vulnerable.tf                      │ terraform │         8         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-02-s3-no-encryption                             │ terraform │         0         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-02-s3-no-encryption/secure.tf                   │ terraform │         8         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-02-s3-no-encryption/vulnerable.tf               │ terraform │         7         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-03-s3-versioning-disabled                       │ terraform │         0         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-03-s3-versioning-disabled/secure.tf             │ terraform │         7         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-03-s3-versioning-disabled/vulnerable.tf         │ terraform │         7         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-04-open-ssh                                     │ terraform │         0         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-04-open-ssh/secure.tf                           │ terraform │         1         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-04-open-ssh/vulnerable.tf                       │ terraform │         2         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-05-open-rdp                                     │ terraform │         0         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-05-open-rdp/secure.tf                           │ terraform │         1         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-05-open-rdp/vulnerable.tf                       │ terraform │         2         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-06-wildcard-iam                                 │ terraform │         0         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-07-unencrypted-ebs                              │ terraform │         0         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-07-unencrypted-ebs/secure.tf                    │ terraform │         1         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-07-unencrypted-ebs/vulnerable.tf                │ terraform │         2         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-08-public-rds                                   │ terraform │         0         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-08-public-rds/secure.tf                         │ terraform │         5         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-08-public-rds/vulnerable.tf                     │ terraform │         6         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-09-unencrypted-rds                              │ terraform │         0         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-09-unencrypted-rds/secure.tf                    │ terraform │         4         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-09-unencrypted-rds/vulnerable.tf                │ terraform │         5         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-10-cloudtrail-validation-disabled               │ terraform │         0         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-10-cloudtrail-validation-disabled/secure.tf     │ terraform │        12         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-10-cloudtrail-validation-disabled/vulnerable.tf │ terraform │        13         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-11-cloudtrail-no-kms                            │ terraform │         0         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-11-cloudtrail-no-kms/secure.tf                  │ terraform │        11         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-11-cloudtrail-no-kms/vulnerable.tf              │ terraform │        13         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-12-kms-rotation-disabled                        │ terraform │         0         │
+├──────────────────────────────────────────────────────┼───────────┼───────────────────┤
+│ case-12-kms-rotation-disabled/vulnerable.tf          │ terraform │         1         │
+└──────────────────────────────────────────────────────┴───────────┴───────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+case-01-public-s3/secure.tf (terraform)
+=======================================
+Tests: 3 (SUCCESSES: 0, FAILURES: 3)
+Failures: 3 (UNKNOWN: 0, LOW: 1, MEDIUM: 1, HIGH: 1, CRITICAL: 0)
+
+AWS-0089 (LOW): Bucket has logging disabled
+════════════════════════════════════════
+Ensures S3 bucket logging is enabled for S3 buckets
+
+See https://avd.aquasec.com/misconfig/aws-0089
+────────────────────────────────────────
+ case-01-public-s3/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-private-access"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0090 (MEDIUM): Bucket does not have versioning enabled
+════════════════════════════════════════
+Versioning in Amazon S3 is a means of keeping multiple variants of an object in the same bucket.
+
+You can use the S3 Versioning feature to preserve, retrieve, and restore every version of every object stored in your buckets.
+
+With versioning you can recover more easily from both unintended user actions and application failures.
+
+When you enable versioning, also keep in mind the potential costs of storing noncurrent versions of objects. To help manage those costs, consider setting up an S3 Lifecycle configuration.
+
+
+See https://avd.aquasec.com/misconfig/aws-0090
+────────────────────────────────────────
+ case-01-public-s3/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-private-access"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0132 (HIGH): Bucket does not encrypt data with a customer managed key.
+════════════════════════════════════════
+Encryption using AWS keys provides protection for your S3 buckets. To gain greater control over encryption, such as key rotation, access policies, and auditability, use customer managed keys (CMKs) with SSE-KMS.
+Note that SSE-KMS is not supported for S3 server access logging destination buckets; in such cases, use SSE-S3 instead.
+
+
+See https://avd.aquasec.com/misconfig/aws-0132
+────────────────────────────────────────
+ case-01-public-s3/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-private-access"
+  16 └ }
+────────────────────────────────────────
+
+
+
+case-01-public-s3/vulnerable.tf (terraform)
+===========================================
+Tests: 8 (SUCCESSES: 0, FAILURES: 8)
+Failures: 8 (UNKNOWN: 0, LOW: 2, MEDIUM: 1, HIGH: 5, CRITICAL: 0)
+
+AWS-0086 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should block public ACLs on buckets and any objects they contain. By blocking, PUTs with fail if the object has any public ACL a.
+
+
+See https://avd.aquasec.com/misconfig/aws-0086
+────────────────────────────────────────
+ case-01-public-s3/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-public-access"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0087 (HIGH): No public access block so not blocking public policies
+════════════════════════════════════════
+S3 bucket policy should have block public policy to prevent users from putting a policy that enable public access.
+
+
+See https://avd.aquasec.com/misconfig/aws-0087
+────────────────────────────────────────
+ case-01-public-s3/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-public-access"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0089 (LOW): Bucket has logging disabled
+════════════════════════════════════════
+Ensures S3 bucket logging is enabled for S3 buckets
+
+See https://avd.aquasec.com/misconfig/aws-0089
+────────────────────────────────────────
+ case-01-public-s3/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-public-access"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0090 (MEDIUM): Bucket does not have versioning enabled
+════════════════════════════════════════
+Versioning in Amazon S3 is a means of keeping multiple variants of an object in the same bucket.
+
+You can use the S3 Versioning feature to preserve, retrieve, and restore every version of every object stored in your buckets.
+
+With versioning you can recover more easily from both unintended user actions and application failures.
+
+When you enable versioning, also keep in mind the potential costs of storing noncurrent versions of objects. To help manage those costs, consider setting up an S3 Lifecycle configuration.
+
+
+See https://avd.aquasec.com/misconfig/aws-0090
+────────────────────────────────────────
+ case-01-public-s3/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-public-access"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0091 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should ignore public ACLs on buckets and any objects they contain. By ignoring rather than blocking, PUT calls with public ACLs will still be applied but the ACL will be ignored.
+
+
+See https://avd.aquasec.com/misconfig/aws-0091
+────────────────────────────────────────
+ case-01-public-s3/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-public-access"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0093 (HIGH): No public access block so not restricting public buckets
+════════════════════════════════════════
+S3 buckets should restrict public policies for the bucket. By enabling, the restrict_public_buckets, only the bucket owner and AWS Services can access if it has a public policy.
+
+
+See https://avd.aquasec.com/misconfig/aws-0093
+────────────────────────────────────────
+ case-01-public-s3/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-public-access"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0094 (LOW): Bucket does not have a corresponding public access block.
+════════════════════════════════════════
+The "block public access" settings in S3 override individual policies that apply to a given bucket, meaning that all public access can be controlled in one central types for that bucket. It is therefore good practice to define these settings for each bucket in order to clearly define the public access that can be allowed for it.
+
+
+See https://avd.aquasec.com/misconfig/aws-0094
+────────────────────────────────────────
+ case-01-public-s3/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-public-access"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0132 (HIGH): Bucket does not encrypt data with a customer managed key.
+════════════════════════════════════════
+Encryption using AWS keys provides protection for your S3 buckets. To gain greater control over encryption, such as key rotation, access policies, and auditability, use customer managed keys (CMKs) with SSE-KMS.
+Note that SSE-KMS is not supported for S3 server access logging destination buckets; in such cases, use SSE-S3 instead.
+
+
+See https://avd.aquasec.com/misconfig/aws-0132
+────────────────────────────────────────
+ case-01-public-s3/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-public-access"
+  16 └ }
+────────────────────────────────────────
+
+
+
+case-02-s3-no-encryption/secure.tf (terraform)
+==============================================
+Tests: 8 (SUCCESSES: 0, FAILURES: 8)
+Failures: 8 (UNKNOWN: 0, LOW: 2, MEDIUM: 1, HIGH: 5, CRITICAL: 0)
+
+AWS-0086 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should block public ACLs on buckets and any objects they contain. By blocking, PUTs with fail if the object has any public ACL a.
+
+
+See https://avd.aquasec.com/misconfig/aws-0086
+────────────────────────────────────────
+ case-02-s3-no-encryption/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-encrypted"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0087 (HIGH): No public access block so not blocking public policies
+════════════════════════════════════════
+S3 bucket policy should have block public policy to prevent users from putting a policy that enable public access.
+
+
+See https://avd.aquasec.com/misconfig/aws-0087
+────────────────────────────────────────
+ case-02-s3-no-encryption/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-encrypted"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0089 (LOW): Bucket has logging disabled
+════════════════════════════════════════
+Ensures S3 bucket logging is enabled for S3 buckets
+
+See https://avd.aquasec.com/misconfig/aws-0089
+────────────────────────────────────────
+ case-02-s3-no-encryption/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-encrypted"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0090 (MEDIUM): Bucket does not have versioning enabled
+════════════════════════════════════════
+Versioning in Amazon S3 is a means of keeping multiple variants of an object in the same bucket.
+
+You can use the S3 Versioning feature to preserve, retrieve, and restore every version of every object stored in your buckets.
+
+With versioning you can recover more easily from both unintended user actions and application failures.
+
+When you enable versioning, also keep in mind the potential costs of storing noncurrent versions of objects. To help manage those costs, consider setting up an S3 Lifecycle configuration.
+
+
+See https://avd.aquasec.com/misconfig/aws-0090
+────────────────────────────────────────
+ case-02-s3-no-encryption/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-encrypted"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0091 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should ignore public ACLs on buckets and any objects they contain. By ignoring rather than blocking, PUT calls with public ACLs will still be applied but the ACL will be ignored.
+
+
+See https://avd.aquasec.com/misconfig/aws-0091
+────────────────────────────────────────
+ case-02-s3-no-encryption/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-encrypted"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0093 (HIGH): No public access block so not restricting public buckets
+════════════════════════════════════════
+S3 buckets should restrict public policies for the bucket. By enabling, the restrict_public_buckets, only the bucket owner and AWS Services can access if it has a public policy.
+
+
+See https://avd.aquasec.com/misconfig/aws-0093
+────────────────────────────────────────
+ case-02-s3-no-encryption/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-encrypted"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0094 (LOW): Bucket does not have a corresponding public access block.
+════════════════════════════════════════
+The "block public access" settings in S3 override individual policies that apply to a given bucket, meaning that all public access can be controlled in one central types for that bucket. It is therefore good practice to define these settings for each bucket in order to clearly define the public access that can be allowed for it.
+
+
+See https://avd.aquasec.com/misconfig/aws-0094
+────────────────────────────────────────
+ case-02-s3-no-encryption/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-encrypted"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0132 (HIGH): Bucket does not encrypt data with a customer managed key.
+════════════════════════════════════════
+Encryption using AWS keys provides protection for your S3 buckets. To gain greater control over encryption, such as key rotation, access policies, and auditability, use customer managed keys (CMKs) with SSE-KMS.
+Note that SSE-KMS is not supported for S3 server access logging destination buckets; in such cases, use SSE-S3 instead.
+
+
+See https://avd.aquasec.com/misconfig/aws-0132
+────────────────────────────────────────
+ case-02-s3-no-encryption/secure.tf:17-24
+────────────────────────────────────────
+  17 ┌ resource "aws_s3_bucket_server_side_encryption_configuration" "benchmark" {
+  18 │   bucket = aws_s3_bucket.benchmark.id
+  19 │   rule {
+  20 │     apply_server_side_encryption_by_default {
+  21 │       sse_algorithm = "AES256"
+  22 │     }
+  23 │   }
+  24 └ }
+────────────────────────────────────────
+
+
+
+case-02-s3-no-encryption/vulnerable.tf (terraform)
+==================================================
+Tests: 7 (SUCCESSES: 0, FAILURES: 7)
+Failures: 7 (UNKNOWN: 0, LOW: 2, MEDIUM: 1, HIGH: 4, CRITICAL: 0)
+
+AWS-0086 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should block public ACLs on buckets and any objects they contain. By blocking, PUTs with fail if the object has any public ACL a.
+
+
+See https://avd.aquasec.com/misconfig/aws-0086
+────────────────────────────────────────
+ case-02-s3-no-encryption/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-no-encryption"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0087 (HIGH): No public access block so not blocking public policies
+════════════════════════════════════════
+S3 bucket policy should have block public policy to prevent users from putting a policy that enable public access.
+
+
+See https://avd.aquasec.com/misconfig/aws-0087
+────────────────────────────────────────
+ case-02-s3-no-encryption/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-no-encryption"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0089 (LOW): Bucket has logging disabled
+════════════════════════════════════════
+Ensures S3 bucket logging is enabled for S3 buckets
+
+See https://avd.aquasec.com/misconfig/aws-0089
+────────────────────────────────────────
+ case-02-s3-no-encryption/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-no-encryption"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0090 (MEDIUM): Bucket does not have versioning enabled
+════════════════════════════════════════
+Versioning in Amazon S3 is a means of keeping multiple variants of an object in the same bucket.
+
+You can use the S3 Versioning feature to preserve, retrieve, and restore every version of every object stored in your buckets.
+
+With versioning you can recover more easily from both unintended user actions and application failures.
+
+When you enable versioning, also keep in mind the potential costs of storing noncurrent versions of objects. To help manage those costs, consider setting up an S3 Lifecycle configuration.
+
+
+See https://avd.aquasec.com/misconfig/aws-0090
+────────────────────────────────────────
+ case-02-s3-no-encryption/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-no-encryption"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0091 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should ignore public ACLs on buckets and any objects they contain. By ignoring rather than blocking, PUT calls with public ACLs will still be applied but the ACL will be ignored.
+
+
+See https://avd.aquasec.com/misconfig/aws-0091
+────────────────────────────────────────
+ case-02-s3-no-encryption/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-no-encryption"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0093 (HIGH): No public access block so not restricting public buckets
+════════════════════════════════════════
+S3 buckets should restrict public policies for the bucket. By enabling, the restrict_public_buckets, only the bucket owner and AWS Services can access if it has a public policy.
+
+
+See https://avd.aquasec.com/misconfig/aws-0093
+────────────────────────────────────────
+ case-02-s3-no-encryption/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-no-encryption"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0094 (LOW): Bucket does not have a corresponding public access block.
+════════════════════════════════════════
+The "block public access" settings in S3 override individual policies that apply to a given bucket, meaning that all public access can be controlled in one central types for that bucket. It is therefore good practice to define these settings for each bucket in order to clearly define the public access that can be allowed for it.
+
+
+See https://avd.aquasec.com/misconfig/aws-0094
+────────────────────────────────────────
+ case-02-s3-no-encryption/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-no-encryption"
+  16 └ }
+────────────────────────────────────────
+
+
+
+case-03-s3-versioning-disabled/secure.tf (terraform)
+====================================================
+Tests: 7 (SUCCESSES: 0, FAILURES: 7)
+Failures: 7 (UNKNOWN: 0, LOW: 2, MEDIUM: 0, HIGH: 5, CRITICAL: 0)
+
+AWS-0086 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should block public ACLs on buckets and any objects they contain. By blocking, PUTs with fail if the object has any public ACL a.
+
+
+See https://avd.aquasec.com/misconfig/aws-0086
+────────────────────────────────────────
+ case-03-s3-versioning-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-versioned"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0087 (HIGH): No public access block so not blocking public policies
+════════════════════════════════════════
+S3 bucket policy should have block public policy to prevent users from putting a policy that enable public access.
+
+
+See https://avd.aquasec.com/misconfig/aws-0087
+────────────────────────────────────────
+ case-03-s3-versioning-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-versioned"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0089 (LOW): Bucket has logging disabled
+════════════════════════════════════════
+Ensures S3 bucket logging is enabled for S3 buckets
+
+See https://avd.aquasec.com/misconfig/aws-0089
+────────────────────────────────────────
+ case-03-s3-versioning-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-versioned"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0091 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should ignore public ACLs on buckets and any objects they contain. By ignoring rather than blocking, PUT calls with public ACLs will still be applied but the ACL will be ignored.
+
+
+See https://avd.aquasec.com/misconfig/aws-0091
+────────────────────────────────────────
+ case-03-s3-versioning-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-versioned"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0093 (HIGH): No public access block so not restricting public buckets
+════════════════════════════════════════
+S3 buckets should restrict public policies for the bucket. By enabling, the restrict_public_buckets, only the bucket owner and AWS Services can access if it has a public policy.
+
+
+See https://avd.aquasec.com/misconfig/aws-0093
+────────────────────────────────────────
+ case-03-s3-versioning-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-versioned"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0094 (LOW): Bucket does not have a corresponding public access block.
+════════════════════════════════════════
+The "block public access" settings in S3 override individual policies that apply to a given bucket, meaning that all public access can be controlled in one central types for that bucket. It is therefore good practice to define these settings for each bucket in order to clearly define the public access that can be allowed for it.
+
+
+See https://avd.aquasec.com/misconfig/aws-0094
+────────────────────────────────────────
+ case-03-s3-versioning-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-versioned"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0132 (HIGH): Bucket does not encrypt data with a customer managed key.
+════════════════════════════════════════
+Encryption using AWS keys provides protection for your S3 buckets. To gain greater control over encryption, such as key rotation, access policies, and auditability, use customer managed keys (CMKs) with SSE-KMS.
+Note that SSE-KMS is not supported for S3 server access logging destination buckets; in such cases, use SSE-S3 instead.
+
+
+See https://avd.aquasec.com/misconfig/aws-0132
+────────────────────────────────────────
+ case-03-s3-versioning-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-versioned"
+  16 └ }
+────────────────────────────────────────
+
+
+
+case-03-s3-versioning-disabled/vulnerable.tf (terraform)
+========================================================
+Tests: 7 (SUCCESSES: 0, FAILURES: 7)
+Failures: 7 (UNKNOWN: 0, LOW: 2, MEDIUM: 0, HIGH: 5, CRITICAL: 0)
+
+AWS-0086 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should block public ACLs on buckets and any objects they contain. By blocking, PUTs with fail if the object has any public ACL a.
+
+
+See https://avd.aquasec.com/misconfig/aws-0086
+────────────────────────────────────────
+ case-03-s3-versioning-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-no-versioning"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0087 (HIGH): No public access block so not blocking public policies
+════════════════════════════════════════
+S3 bucket policy should have block public policy to prevent users from putting a policy that enable public access.
+
+
+See https://avd.aquasec.com/misconfig/aws-0087
+────────────────────────────────────────
+ case-03-s3-versioning-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-no-versioning"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0089 (LOW): Bucket has logging disabled
+════════════════════════════════════════
+Ensures S3 bucket logging is enabled for S3 buckets
+
+See https://avd.aquasec.com/misconfig/aws-0089
+────────────────────────────────────────
+ case-03-s3-versioning-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-no-versioning"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0091 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should ignore public ACLs on buckets and any objects they contain. By ignoring rather than blocking, PUT calls with public ACLs will still be applied but the ACL will be ignored.
+
+
+See https://avd.aquasec.com/misconfig/aws-0091
+────────────────────────────────────────
+ case-03-s3-versioning-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-no-versioning"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0093 (HIGH): No public access block so not restricting public buckets
+════════════════════════════════════════
+S3 buckets should restrict public policies for the bucket. By enabling, the restrict_public_buckets, only the bucket owner and AWS Services can access if it has a public policy.
+
+
+See https://avd.aquasec.com/misconfig/aws-0093
+────────────────────────────────────────
+ case-03-s3-versioning-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-no-versioning"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0094 (LOW): Bucket does not have a corresponding public access block.
+════════════════════════════════════════
+The "block public access" settings in S3 override individual policies that apply to a given bucket, meaning that all public access can be controlled in one central types for that bucket. It is therefore good practice to define these settings for each bucket in order to clearly define the public access that can be allowed for it.
+
+
+See https://avd.aquasec.com/misconfig/aws-0094
+────────────────────────────────────────
+ case-03-s3-versioning-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-no-versioning"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0132 (HIGH): Bucket does not encrypt data with a customer managed key.
+════════════════════════════════════════
+Encryption using AWS keys provides protection for your S3 buckets. To gain greater control over encryption, such as key rotation, access policies, and auditability, use customer managed keys (CMKs) with SSE-KMS.
+Note that SSE-KMS is not supported for S3 server access logging destination buckets; in such cases, use SSE-S3 instead.
+
+
+See https://avd.aquasec.com/misconfig/aws-0132
+────────────────────────────────────────
+ case-03-s3-versioning-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "benchmark" {
+  15 │   bucket = "benchmark-fictional-no-versioning"
+  16 └ }
+────────────────────────────────────────
+
+
+
+case-04-open-ssh/secure.tf (terraform)
+======================================
+Tests: 1 (SUCCESSES: 0, FAILURES: 1)
+Failures: 1 (UNKNOWN: 0, LOW: 1, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+AWS-0124 (LOW): Security group rule does not have a description.
+════════════════════════════════════════
+Security group rules should include a description for auditing purposes.
+
+Simplifies auditing, debugging, and managing security groups.
+
+
+See https://avd.aquasec.com/misconfig/aws-0124
+────────────────────────────────────────
+ case-04-open-ssh/secure.tf:17-22
+   via case-04-open-ssh/secure.tf:14-23 (aws_security_group.benchmark)
+────────────────────────────────────────
+  14   resource "aws_security_group" "benchmark" {
+  15     name        = "benchmark-fictional-restricted-ssh"
+  16     description = "Benchmark only"
+  17 ┌   ingress {
+  18 │     from_port   = 22
+  19 │     to_port     = 22
+  20 │     protocol    = "tcp"
+  21 │     cidr_blocks = ["198.51.100.0/24"]
+  22 └   }
+  23   }
+────────────────────────────────────────
+
+
+
+case-04-open-ssh/vulnerable.tf (terraform)
+==========================================
+Tests: 2 (SUCCESSES: 0, FAILURES: 2)
+Failures: 2 (UNKNOWN: 0, LOW: 1, MEDIUM: 0, HIGH: 1, CRITICAL: 0)
+
+AWS-0107 (HIGH): Security group rule allows unrestricted ingress from any IP address.
+════════════════════════════════════════
+Security groups provide stateful filtering of ingress and egress network traffic to AWS
+resources. It is recommended that no security group allows unrestricted ingress access to
+remote server administration ports, such as SSH to port 22 and RDP to port 3389.
+
+
+See https://avd.aquasec.com/misconfig/aws-0107
+────────────────────────────────────────
+ case-04-open-ssh/vulnerable.tf:21
+   via case-04-open-ssh/vulnerable.tf:17-22 (ingress)
+    via case-04-open-ssh/vulnerable.tf:14-23 (aws_security_group.benchmark)
+────────────────────────────────────────
+  14   resource "aws_security_group" "benchmark" {
+  15     name        = "benchmark-fictional-open-ssh"
+  16     description = "Benchmark only"
+  17     ingress {
+  18       from_port   = 22
+  19       to_port     = 22
+  20       protocol    = "tcp"
+  21 [     cidr_blocks = ["0.0.0.0/0"]
+  22     }
+  23   }
+────────────────────────────────────────
+
+
+AWS-0124 (LOW): Security group rule does not have a description.
+════════════════════════════════════════
+Security group rules should include a description for auditing purposes.
+
+Simplifies auditing, debugging, and managing security groups.
+
+
+See https://avd.aquasec.com/misconfig/aws-0124
+────────────────────────────────────────
+ case-04-open-ssh/vulnerable.tf:17-22
+   via case-04-open-ssh/vulnerable.tf:14-23 (aws_security_group.benchmark)
+────────────────────────────────────────
+  14   resource "aws_security_group" "benchmark" {
+  15     name        = "benchmark-fictional-open-ssh"
+  16     description = "Benchmark only"
+  17 ┌   ingress {
+  18 │     from_port   = 22
+  19 │     to_port     = 22
+  20 │     protocol    = "tcp"
+  21 │     cidr_blocks = ["0.0.0.0/0"]
+  22 └   }
+  23   }
+────────────────────────────────────────
+
+
+
+case-05-open-rdp/secure.tf (terraform)
+======================================
+Tests: 1 (SUCCESSES: 0, FAILURES: 1)
+Failures: 1 (UNKNOWN: 0, LOW: 1, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+AWS-0124 (LOW): Security group rule does not have a description.
+════════════════════════════════════════
+Security group rules should include a description for auditing purposes.
+
+Simplifies auditing, debugging, and managing security groups.
+
+
+See https://avd.aquasec.com/misconfig/aws-0124
+────────────────────────────────────────
+ case-05-open-rdp/secure.tf:17-22
+   via case-05-open-rdp/secure.tf:14-23 (aws_security_group.benchmark)
+────────────────────────────────────────
+  14   resource "aws_security_group" "benchmark" {
+  15     name        = "benchmark-fictional-restricted-rdp"
+  16     description = "Benchmark only"
+  17 ┌   ingress {
+  18 │     from_port   = 3389
+  19 │     to_port     = 3389
+  20 │     protocol    = "tcp"
+  21 │     cidr_blocks = ["198.51.100.0/24"]
+  22 └   }
+  23   }
+────────────────────────────────────────
+
+
+
+case-05-open-rdp/vulnerable.tf (terraform)
+==========================================
+Tests: 2 (SUCCESSES: 0, FAILURES: 2)
+Failures: 2 (UNKNOWN: 0, LOW: 1, MEDIUM: 0, HIGH: 1, CRITICAL: 0)
+
+AWS-0107 (HIGH): Security group rule allows unrestricted ingress from any IP address.
+════════════════════════════════════════
+Security groups provide stateful filtering of ingress and egress network traffic to AWS
+resources. It is recommended that no security group allows unrestricted ingress access to
+remote server administration ports, such as SSH to port 22 and RDP to port 3389.
+
+
+See https://avd.aquasec.com/misconfig/aws-0107
+────────────────────────────────────────
+ case-05-open-rdp/vulnerable.tf:21
+   via case-05-open-rdp/vulnerable.tf:17-22 (ingress)
+    via case-05-open-rdp/vulnerable.tf:14-23 (aws_security_group.benchmark)
+────────────────────────────────────────
+  14   resource "aws_security_group" "benchmark" {
+  15     name        = "benchmark-fictional-open-rdp"
+  16     description = "Benchmark only"
+  17     ingress {
+  18       from_port   = 3389
+  19       to_port     = 3389
+  20       protocol    = "tcp"
+  21 [     cidr_blocks = ["0.0.0.0/0"]
+  22     }
+  23   }
+────────────────────────────────────────
+
+
+AWS-0124 (LOW): Security group rule does not have a description.
+════════════════════════════════════════
+Security group rules should include a description for auditing purposes.
+
+Simplifies auditing, debugging, and managing security groups.
+
+
+See https://avd.aquasec.com/misconfig/aws-0124
+────────────────────────────────────────
+ case-05-open-rdp/vulnerable.tf:17-22
+   via case-05-open-rdp/vulnerable.tf:14-23 (aws_security_group.benchmark)
+────────────────────────────────────────
+  14   resource "aws_security_group" "benchmark" {
+  15     name        = "benchmark-fictional-open-rdp"
+  16     description = "Benchmark only"
+  17 ┌   ingress {
+  18 │     from_port   = 3389
+  19 │     to_port     = 3389
+  20 │     protocol    = "tcp"
+  21 │     cidr_blocks = ["0.0.0.0/0"]
+  22 └   }
+  23   }
+────────────────────────────────────────
+
+
+
+case-07-unencrypted-ebs/secure.tf (terraform)
+=============================================
+Tests: 1 (SUCCESSES: 0, FAILURES: 1)
+Failures: 1 (UNKNOWN: 0, LOW: 1, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+AWS-0027 (LOW): EBS volume does not use a customer-managed KMS key.
+════════════════════════════════════════
+Encryption using AWS keys provides protection for your EBS volume. To increase control of the encryption and manage factors like rotation use customer managed keys.
+
+
+See https://avd.aquasec.com/misconfig/aws-0027
+────────────────────────────────────────
+ case-07-unencrypted-ebs/secure.tf:14-19
+────────────────────────────────────────
+  14 ┌ resource "aws_ebs_volume" "benchmark" {
+  15 │   availability_zone = "us-east-1a"
+  16 │   size              = 20
+  17 │   encrypted         = true
+  18 │   tags              = { Name = "benchmark-fictional-ebs" }
+  19 └ }
+────────────────────────────────────────
+
+
+
+case-07-unencrypted-ebs/vulnerable.tf (terraform)
+=================================================
+Tests: 2 (SUCCESSES: 0, FAILURES: 2)
+Failures: 2 (UNKNOWN: 0, LOW: 1, MEDIUM: 0, HIGH: 1, CRITICAL: 0)
+
+AWS-0026 (HIGH): EBS volume is not encrypted.
+════════════════════════════════════════
+By enabling encryption on EBS volumes you protect the volume, the disk I/O and any derived snapshots from compromise if intercepted.
+
+
+See https://avd.aquasec.com/misconfig/aws-0026
+────────────────────────────────────────
+ case-07-unencrypted-ebs/vulnerable.tf:17
+   via case-07-unencrypted-ebs/vulnerable.tf:14-19 (aws_ebs_volume.benchmark)
+────────────────────────────────────────
+  14   resource "aws_ebs_volume" "benchmark" {
+  15     availability_zone = "us-east-1a"
+  16     size              = 20
+  17 [   encrypted         = false
+  18     tags              = { Name = "benchmark-fictional-ebs" }
+  19   }
+────────────────────────────────────────
+
+
+AWS-0027 (LOW): EBS volume does not use a customer-managed KMS key.
+════════════════════════════════════════
+Encryption using AWS keys provides protection for your EBS volume. To increase control of the encryption and manage factors like rotation use customer managed keys.
+
+
+See https://avd.aquasec.com/misconfig/aws-0027
+────────────────────────────────────────
+ case-07-unencrypted-ebs/vulnerable.tf:14-19
+────────────────────────────────────────
+  14 ┌ resource "aws_ebs_volume" "benchmark" {
+  15 │   availability_zone = "us-east-1a"
+  16 │   size              = 20
+  17 │   encrypted         = false
+  18 │   tags              = { Name = "benchmark-fictional-ebs" }
+  19 └ }
+────────────────────────────────────────
+
+
+
+case-08-public-rds/secure.tf (terraform)
+========================================
+Tests: 5 (SUCCESSES: 0, FAILURES: 5)
+Failures: 5 (UNKNOWN: 0, LOW: 1, MEDIUM: 3, HIGH: 1, CRITICAL: 0)
+
+AWS-0077 (MEDIUM): Instance has very low backup retention period.
+════════════════════════════════════════
+RDS backup retention for clusters defaults to 1 day, this may not be enough to identify and respond to an issue. Backup retention periods should be set to a period that is a balance on cost and limiting risk.
+
+
+See https://avd.aquasec.com/misconfig/aws-0077
+────────────────────────────────────────
+ case-08-public-rds/secure.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-private-db"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   publicly_accessible = false
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0080 (HIGH): Instance does not have storage encryption enabled.
+════════════════════════════════════════
+Encryption should be enabled for an RDS Database instances.
+When enabling encryption by setting the kms_key_id.
+
+
+See https://avd.aquasec.com/misconfig/aws-0080
+────────────────────────────────────────
+ case-08-public-rds/secure.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-private-db"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   publicly_accessible = false
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0133 (LOW): Instance does not have performance insights enabled.
+════════════════════════════════════════
+Enabling Performance insights allows for greater depth in monitoring data.
+For example, information about active sessions could help diagose a compromise or assist in the investigation
+
+
+See https://avd.aquasec.com/misconfig/aws-0133
+────────────────────────────────────────
+ case-08-public-rds/secure.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-private-db"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   publicly_accessible = false
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0176 (MEDIUM): Instance does not have IAM Authentication enabled
+════════════════════════════════════════
+Ensure IAM Database Authentication is enabled for RDS database instances to manage database access
+
+See https://avd.aquasec.com/misconfig/aws-0176
+────────────────────────────────────────
+ case-08-public-rds/secure.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-private-db"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   publicly_accessible = false
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0177 (MEDIUM): Instance does not have Deletion Protection enabled
+════════════════════════════════════════
+Ensure deletion protection is enabled for RDS database instances.
+
+See https://avd.aquasec.com/misconfig/aws-0177
+────────────────────────────────────────
+ case-08-public-rds/secure.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-private-db"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   publicly_accessible = false
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+
+case-08-public-rds/vulnerable.tf (terraform)
+============================================
+Tests: 6 (SUCCESSES: 0, FAILURES: 6)
+Failures: 6 (UNKNOWN: 0, LOW: 1, MEDIUM: 3, HIGH: 2, CRITICAL: 0)
+
+AWS-0077 (MEDIUM): Instance has very low backup retention period.
+════════════════════════════════════════
+RDS backup retention for clusters defaults to 1 day, this may not be enough to identify and respond to an issue. Backup retention periods should be set to a period that is a balance on cost and limiting risk.
+
+
+See https://avd.aquasec.com/misconfig/aws-0077
+────────────────────────────────────────
+ case-08-public-rds/vulnerable.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-public-db"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   publicly_accessible = true
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0080 (HIGH): Instance does not have storage encryption enabled.
+════════════════════════════════════════
+Encryption should be enabled for an RDS Database instances.
+When enabling encryption by setting the kms_key_id.
+
+
+See https://avd.aquasec.com/misconfig/aws-0080
+────────────────────────────────────────
+ case-08-public-rds/vulnerable.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-public-db"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   publicly_accessible = true
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0133 (LOW): Instance does not have performance insights enabled.
+════════════════════════════════════════
+Enabling Performance insights allows for greater depth in monitoring data.
+For example, information about active sessions could help diagose a compromise or assist in the investigation
+
+
+See https://avd.aquasec.com/misconfig/aws-0133
+────────────────────────────────────────
+ case-08-public-rds/vulnerable.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-public-db"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   publicly_accessible = true
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0176 (MEDIUM): Instance does not have IAM Authentication enabled
+════════════════════════════════════════
+Ensure IAM Database Authentication is enabled for RDS database instances to manage database access
+
+See https://avd.aquasec.com/misconfig/aws-0176
+────────────────────────────────────────
+ case-08-public-rds/vulnerable.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-public-db"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   publicly_accessible = true
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0177 (MEDIUM): Instance does not have Deletion Protection enabled
+════════════════════════════════════════
+Ensure deletion protection is enabled for RDS database instances.
+
+See https://avd.aquasec.com/misconfig/aws-0177
+────────────────────────────────────────
+ case-08-public-rds/vulnerable.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-public-db"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   publicly_accessible = true
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0180 (HIGH): Instance has Public Access enabled
+════════════════════════════════════════
+Ensures RDS instances and RDS Cluster instances are not launched into the public cloud.
+
+See https://avd.aquasec.com/misconfig/aws-0180
+────────────────────────────────────────
+ case-08-public-rds/vulnerable.tf:25
+   via case-08-public-rds/vulnerable.tf:18-27 (aws_db_instance.benchmark)
+────────────────────────────────────────
+  18   resource "aws_db_instance" "benchmark" {
+  19     identifier          = "benchmark-fictional-public-db"
+  20     engine              = "postgres"
+  21     instance_class      = "db.t3.micro"
+  22     allocated_storage   = 20
+  23     username            = "benchmark_user"
+  24     password            = var.benchmark_password
+  25 [   publicly_accessible = true
+  26     skip_final_snapshot = true
+  27   }
+────────────────────────────────────────
+
+
+
+case-09-unencrypted-rds/secure.tf (terraform)
+=============================================
+Tests: 4 (SUCCESSES: 0, FAILURES: 4)
+Failures: 4 (UNKNOWN: 0, LOW: 1, MEDIUM: 3, HIGH: 0, CRITICAL: 0)
+
+AWS-0077 (MEDIUM): Instance has very low backup retention period.
+════════════════════════════════════════
+RDS backup retention for clusters defaults to 1 day, this may not be enough to identify and respond to an issue. Backup retention periods should be set to a period that is a balance on cost and limiting risk.
+
+
+See https://avd.aquasec.com/misconfig/aws-0077
+────────────────────────────────────────
+ case-09-unencrypted-rds/secure.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-encrypted"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   storage_encrypted   = true
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0133 (LOW): Instance does not have performance insights enabled.
+════════════════════════════════════════
+Enabling Performance insights allows for greater depth in monitoring data.
+For example, information about active sessions could help diagose a compromise or assist in the investigation
+
+
+See https://avd.aquasec.com/misconfig/aws-0133
+────────────────────────────────────────
+ case-09-unencrypted-rds/secure.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-encrypted"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   storage_encrypted   = true
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0176 (MEDIUM): Instance does not have IAM Authentication enabled
+════════════════════════════════════════
+Ensure IAM Database Authentication is enabled for RDS database instances to manage database access
+
+See https://avd.aquasec.com/misconfig/aws-0176
+────────────────────────────────────────
+ case-09-unencrypted-rds/secure.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-encrypted"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   storage_encrypted   = true
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0177 (MEDIUM): Instance does not have Deletion Protection enabled
+════════════════════════════════════════
+Ensure deletion protection is enabled for RDS database instances.
+
+See https://avd.aquasec.com/misconfig/aws-0177
+────────────────────────────────────────
+ case-09-unencrypted-rds/secure.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-encrypted"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   storage_encrypted   = true
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+
+case-09-unencrypted-rds/vulnerable.tf (terraform)
+=================================================
+Tests: 5 (SUCCESSES: 0, FAILURES: 5)
+Failures: 5 (UNKNOWN: 0, LOW: 1, MEDIUM: 3, HIGH: 1, CRITICAL: 0)
+
+AWS-0077 (MEDIUM): Instance has very low backup retention period.
+════════════════════════════════════════
+RDS backup retention for clusters defaults to 1 day, this may not be enough to identify and respond to an issue. Backup retention periods should be set to a period that is a balance on cost and limiting risk.
+
+
+See https://avd.aquasec.com/misconfig/aws-0077
+────────────────────────────────────────
+ case-09-unencrypted-rds/vulnerable.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-no-encryption"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   storage_encrypted   = false
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0080 (HIGH): Instance does not have storage encryption enabled.
+════════════════════════════════════════
+Encryption should be enabled for an RDS Database instances.
+When enabling encryption by setting the kms_key_id.
+
+
+See https://avd.aquasec.com/misconfig/aws-0080
+────────────────────────────────────────
+ case-09-unencrypted-rds/vulnerable.tf:25
+   via case-09-unencrypted-rds/vulnerable.tf:18-27 (aws_db_instance.benchmark)
+────────────────────────────────────────
+  18   resource "aws_db_instance" "benchmark" {
+  19     identifier          = "benchmark-fictional-no-encryption"
+  20     engine              = "postgres"
+  21     instance_class      = "db.t3.micro"
+  22     allocated_storage   = 20
+  23     username            = "benchmark_user"
+  24     password            = var.benchmark_password
+  25 [   storage_encrypted   = false
+  26     skip_final_snapshot = true
+  27   }
+────────────────────────────────────────
+
+
+AWS-0133 (LOW): Instance does not have performance insights enabled.
+════════════════════════════════════════
+Enabling Performance insights allows for greater depth in monitoring data.
+For example, information about active sessions could help diagose a compromise or assist in the investigation
+
+
+See https://avd.aquasec.com/misconfig/aws-0133
+────────────────────────────────────────
+ case-09-unencrypted-rds/vulnerable.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-no-encryption"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   storage_encrypted   = false
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0176 (MEDIUM): Instance does not have IAM Authentication enabled
+════════════════════════════════════════
+Ensure IAM Database Authentication is enabled for RDS database instances to manage database access
+
+See https://avd.aquasec.com/misconfig/aws-0176
+────────────────────────────────────────
+ case-09-unencrypted-rds/vulnerable.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-no-encryption"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   storage_encrypted   = false
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0177 (MEDIUM): Instance does not have Deletion Protection enabled
+════════════════════════════════════════
+Ensure deletion protection is enabled for RDS database instances.
+
+See https://avd.aquasec.com/misconfig/aws-0177
+────────────────────────────────────────
+ case-09-unencrypted-rds/vulnerable.tf:18-27
+────────────────────────────────────────
+  18 ┌ resource "aws_db_instance" "benchmark" {
+  19 │   identifier          = "benchmark-fictional-no-encryption"
+  20 │   engine              = "postgres"
+  21 │   instance_class      = "db.t3.micro"
+  22 │   allocated_storage   = 20
+  23 │   username            = "benchmark_user"
+  24 │   password            = var.benchmark_password
+  25 │   storage_encrypted   = false
+  26 │   skip_final_snapshot = true
+  27 └ }
+────────────────────────────────────────
+
+
+
+case-10-cloudtrail-validation-disabled/secure.tf (terraform)
+============================================================
+Tests: 12 (SUCCESSES: 0, FAILURES: 12)
+Failures: 12 (UNKNOWN: 0, LOW: 4, MEDIUM: 2, HIGH: 6, CRITICAL: 0)
+
+AWS-0014 (MEDIUM): Trail is not enabled across all regions.
+════════════════════════════════════════
+Activity could be happening in your account in a different region. When creating Cloudtrail in the AWS Management Console the trail is configured by default to be multi-region, this isn't the case with the Terraform resource. Cloudtrail should cover the full AWS account to ensure you can track changes in regions you are not actively operating in.
+
+
+See https://avd.aquasec.com/misconfig/aws-0014
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/secure.tf:23
+   via case-10-cloudtrail-validation-disabled/secure.tf:17-24 (aws_cloudtrail.benchmark)
+────────────────────────────────────────
+  17   resource "aws_cloudtrail" "benchmark" {
+  18     name                       = "benchmark-fictional-trail"
+  19     s3_bucket_name             = aws_s3_bucket.logs.id
+  20     enable_log_file_validation = true
+  21   
+  22     include_global_service_events = true
+  23 [   is_multi_region_trail         = false
+  24   }
+────────────────────────────────────────
+
+
+AWS-0015 (HIGH): CloudTrail does not use a customer managed key to encrypt the logs.
+════════════════════════════════════════
+Using AWS managed keys does not allow for fine grained control.  Using Customer managed keys provides comprehensive control over cryptographic keys, enabling management of policies, permissions, and rotation, thus enhancing security and compliance measures for sensitive data and systems.
+
+
+See https://avd.aquasec.com/misconfig/aws-0015
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/secure.tf:17-24
+────────────────────────────────────────
+  17 ┌ resource "aws_cloudtrail" "benchmark" {
+  18 │   name                       = "benchmark-fictional-trail"
+  19 │   s3_bucket_name             = aws_s3_bucket.logs.id
+  20 │   enable_log_file_validation = true
+  21 │ 
+  22 │   include_global_service_events = true
+  23 │   is_multi_region_trail         = false
+  24 └ }
+────────────────────────────────────────
+
+
+AWS-0086 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should block public ACLs on buckets and any objects they contain. By blocking, PUTs with fail if the object has any public ACL a.
+
+
+See https://avd.aquasec.com/misconfig/aws-0086
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0087 (HIGH): No public access block so not blocking public policies
+════════════════════════════════════════
+S3 bucket policy should have block public policy to prevent users from putting a policy that enable public access.
+
+
+See https://avd.aquasec.com/misconfig/aws-0087
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0089 (LOW): Bucket has logging disabled
+════════════════════════════════════════
+Ensures S3 bucket logging is enabled for S3 buckets
+
+See https://avd.aquasec.com/misconfig/aws-0089
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0090 (MEDIUM): Bucket does not have versioning enabled
+════════════════════════════════════════
+Versioning in Amazon S3 is a means of keeping multiple variants of an object in the same bucket.
+
+You can use the S3 Versioning feature to preserve, retrieve, and restore every version of every object stored in your buckets.
+
+With versioning you can recover more easily from both unintended user actions and application failures.
+
+When you enable versioning, also keep in mind the potential costs of storing noncurrent versions of objects. To help manage those costs, consider setting up an S3 Lifecycle configuration.
+
+
+See https://avd.aquasec.com/misconfig/aws-0090
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0091 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should ignore public ACLs on buckets and any objects they contain. By ignoring rather than blocking, PUT calls with public ACLs will still be applied but the ACL will be ignored.
+
+
+See https://avd.aquasec.com/misconfig/aws-0091
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0093 (HIGH): No public access block so not restricting public buckets
+════════════════════════════════════════
+S3 buckets should restrict public policies for the bucket. By enabling, the restrict_public_buckets, only the bucket owner and AWS Services can access if it has a public policy.
+
+
+See https://avd.aquasec.com/misconfig/aws-0093
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0094 (LOW): Bucket does not have a corresponding public access block.
+════════════════════════════════════════
+The "block public access" settings in S3 override individual policies that apply to a given bucket, meaning that all public access can be controlled in one central types for that bucket. It is therefore good practice to define these settings for each bucket in order to clearly define the public access that can be allowed for it.
+
+
+See https://avd.aquasec.com/misconfig/aws-0094
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0132 (HIGH): Bucket does not encrypt data with a customer managed key.
+════════════════════════════════════════
+Encryption using AWS keys provides protection for your S3 buckets. To gain greater control over encryption, such as key rotation, access policies, and auditability, use customer managed keys (CMKs) with SSE-KMS.
+Note that SSE-KMS is not supported for S3 server access logging destination buckets; in such cases, use SSE-S3 instead.
+
+
+See https://avd.aquasec.com/misconfig/aws-0132
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0162 (LOW): Trail does not have CloudWatch logging configured
+════════════════════════════════════════
+Realtime log analysis is not available without enabling CloudWatch logging.
+
+CloudTrail is a web service that records AWS API calls made in a given account. The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, the request parameters, and the response elements returned by the AWS service.
+
+CloudTrail uses Amazon S3 for log file storage and delivery, so log files are stored durably. In addition to capturing CloudTrail logs in a specified Amazon S3 bucket for long-term analysis, you can perform real-time analysis by configuring CloudTrail to send logs to CloudWatch Logs.
+
+For a trail that is enabled in all Regions in an account, CloudTrail sends log files from all those Regions to a CloudWatch Logs log group.
+
+
+See https://avd.aquasec.com/misconfig/aws-0162
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/secure.tf:17-24
+────────────────────────────────────────
+  17 ┌ resource "aws_cloudtrail" "benchmark" {
+  18 │   name                       = "benchmark-fictional-trail"
+  19 │   s3_bucket_name             = aws_s3_bucket.logs.id
+  20 │   enable_log_file_validation = true
+  21 │ 
+  22 │   include_global_service_events = true
+  23 │   is_multi_region_trail         = false
+  24 └ }
+────────────────────────────────────────
+
+
+AWS-0163 (LOW): Trail S3 bucket does not have logging enabled
+════════════════════════════════════════
+Amazon S3 bucket access logging generates a log that contains access records for each request made to your S3 bucket. An access log record contains details about the request, such as the request type, the resources specified in the request worked, and the time and date the request was processed.
+CIS recommends that you enable bucket access logging on the CloudTrail S3 bucket.
+By enabling S3 bucket logging on target S3 buckets, you can capture all events that might affect objects in a target bucket. Configuring logs to be placed in a separate bucket enables access to log information, which can be useful in security and incident response workflows.
+
+
+See https://avd.aquasec.com/misconfig/aws-0163
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/secure.tf:15
+   via case-10-cloudtrail-validation-disabled/secure.tf:14-16 (aws_s3_bucket.logs)
+────────────────────────────────────────
+  14   resource "aws_s3_bucket" "logs" {
+  15 [   bucket = "benchmark-fictional-trail-logs"
+  16   }
+────────────────────────────────────────
+
+
+
+case-10-cloudtrail-validation-disabled/vulnerable.tf (terraform)
+================================================================
+Tests: 13 (SUCCESSES: 0, FAILURES: 13)
+Failures: 13 (UNKNOWN: 0, LOW: 4, MEDIUM: 2, HIGH: 7, CRITICAL: 0)
+
+AWS-0014 (MEDIUM): Trail is not enabled across all regions.
+════════════════════════════════════════
+Activity could be happening in your account in a different region. When creating Cloudtrail in the AWS Management Console the trail is configured by default to be multi-region, this isn't the case with the Terraform resource. Cloudtrail should cover the full AWS account to ensure you can track changes in regions you are not actively operating in.
+
+
+See https://avd.aquasec.com/misconfig/aws-0014
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/vulnerable.tf:23
+   via case-10-cloudtrail-validation-disabled/vulnerable.tf:17-24 (aws_cloudtrail.benchmark)
+────────────────────────────────────────
+  17   resource "aws_cloudtrail" "benchmark" {
+  18     name                       = "benchmark-fictional-trail"
+  19     s3_bucket_name             = aws_s3_bucket.logs.id
+  20     enable_log_file_validation = false
+  21   
+  22     include_global_service_events = true
+  23 [   is_multi_region_trail         = false
+  24   }
+────────────────────────────────────────
+
+
+AWS-0015 (HIGH): CloudTrail does not use a customer managed key to encrypt the logs.
+════════════════════════════════════════
+Using AWS managed keys does not allow for fine grained control.  Using Customer managed keys provides comprehensive control over cryptographic keys, enabling management of policies, permissions, and rotation, thus enhancing security and compliance measures for sensitive data and systems.
+
+
+See https://avd.aquasec.com/misconfig/aws-0015
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/vulnerable.tf:17-24
+────────────────────────────────────────
+  17 ┌ resource "aws_cloudtrail" "benchmark" {
+  18 │   name                       = "benchmark-fictional-trail"
+  19 │   s3_bucket_name             = aws_s3_bucket.logs.id
+  20 │   enable_log_file_validation = false
+  21 │ 
+  22 │   include_global_service_events = true
+  23 │   is_multi_region_trail         = false
+  24 └ }
+────────────────────────────────────────
+
+
+AWS-0016 (HIGH): Trail does not have log validation enabled.
+════════════════════════════════════════
+Illicit activity could be removed from the logs. Log validation should be activated on Cloudtrail logs to prevent the tampering of the underlying data in the S3 bucket. It is feasible that a rogue actor compromising an AWS account might want to modify the log data to remove trace of their actions.
+
+
+See https://avd.aquasec.com/misconfig/aws-0016
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/vulnerable.tf:20
+   via case-10-cloudtrail-validation-disabled/vulnerable.tf:17-24 (aws_cloudtrail.benchmark)
+────────────────────────────────────────
+  17   resource "aws_cloudtrail" "benchmark" {
+  18     name                       = "benchmark-fictional-trail"
+  19     s3_bucket_name             = aws_s3_bucket.logs.id
+  20 [   enable_log_file_validation = false
+  21   
+  22     include_global_service_events = true
+  23     is_multi_region_trail         = false
+  24   }
+────────────────────────────────────────
+
+
+AWS-0086 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should block public ACLs on buckets and any objects they contain. By blocking, PUTs with fail if the object has any public ACL a.
+
+
+See https://avd.aquasec.com/misconfig/aws-0086
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0087 (HIGH): No public access block so not blocking public policies
+════════════════════════════════════════
+S3 bucket policy should have block public policy to prevent users from putting a policy that enable public access.
+
+
+See https://avd.aquasec.com/misconfig/aws-0087
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0089 (LOW): Bucket has logging disabled
+════════════════════════════════════════
+Ensures S3 bucket logging is enabled for S3 buckets
+
+See https://avd.aquasec.com/misconfig/aws-0089
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0090 (MEDIUM): Bucket does not have versioning enabled
+════════════════════════════════════════
+Versioning in Amazon S3 is a means of keeping multiple variants of an object in the same bucket.
+
+You can use the S3 Versioning feature to preserve, retrieve, and restore every version of every object stored in your buckets.
+
+With versioning you can recover more easily from both unintended user actions and application failures.
+
+When you enable versioning, also keep in mind the potential costs of storing noncurrent versions of objects. To help manage those costs, consider setting up an S3 Lifecycle configuration.
+
+
+See https://avd.aquasec.com/misconfig/aws-0090
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0091 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should ignore public ACLs on buckets and any objects they contain. By ignoring rather than blocking, PUT calls with public ACLs will still be applied but the ACL will be ignored.
+
+
+See https://avd.aquasec.com/misconfig/aws-0091
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0093 (HIGH): No public access block so not restricting public buckets
+════════════════════════════════════════
+S3 buckets should restrict public policies for the bucket. By enabling, the restrict_public_buckets, only the bucket owner and AWS Services can access if it has a public policy.
+
+
+See https://avd.aquasec.com/misconfig/aws-0093
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0094 (LOW): Bucket does not have a corresponding public access block.
+════════════════════════════════════════
+The "block public access" settings in S3 override individual policies that apply to a given bucket, meaning that all public access can be controlled in one central types for that bucket. It is therefore good practice to define these settings for each bucket in order to clearly define the public access that can be allowed for it.
+
+
+See https://avd.aquasec.com/misconfig/aws-0094
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0132 (HIGH): Bucket does not encrypt data with a customer managed key.
+════════════════════════════════════════
+Encryption using AWS keys provides protection for your S3 buckets. To gain greater control over encryption, such as key rotation, access policies, and auditability, use customer managed keys (CMKs) with SSE-KMS.
+Note that SSE-KMS is not supported for S3 server access logging destination buckets; in such cases, use SSE-S3 instead.
+
+
+See https://avd.aquasec.com/misconfig/aws-0132
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0162 (LOW): Trail does not have CloudWatch logging configured
+════════════════════════════════════════
+Realtime log analysis is not available without enabling CloudWatch logging.
+
+CloudTrail is a web service that records AWS API calls made in a given account. The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, the request parameters, and the response elements returned by the AWS service.
+
+CloudTrail uses Amazon S3 for log file storage and delivery, so log files are stored durably. In addition to capturing CloudTrail logs in a specified Amazon S3 bucket for long-term analysis, you can perform real-time analysis by configuring CloudTrail to send logs to CloudWatch Logs.
+
+For a trail that is enabled in all Regions in an account, CloudTrail sends log files from all those Regions to a CloudWatch Logs log group.
+
+
+See https://avd.aquasec.com/misconfig/aws-0162
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/vulnerable.tf:17-24
+────────────────────────────────────────
+  17 ┌ resource "aws_cloudtrail" "benchmark" {
+  18 │   name                       = "benchmark-fictional-trail"
+  19 │   s3_bucket_name             = aws_s3_bucket.logs.id
+  20 │   enable_log_file_validation = false
+  21 │ 
+  22 │   include_global_service_events = true
+  23 │   is_multi_region_trail         = false
+  24 └ }
+────────────────────────────────────────
+
+
+AWS-0163 (LOW): Trail S3 bucket does not have logging enabled
+════════════════════════════════════════
+Amazon S3 bucket access logging generates a log that contains access records for each request made to your S3 bucket. An access log record contains details about the request, such as the request type, the resources specified in the request worked, and the time and date the request was processed.
+CIS recommends that you enable bucket access logging on the CloudTrail S3 bucket.
+By enabling S3 bucket logging on target S3 buckets, you can capture all events that might affect objects in a target bucket. Configuring logs to be placed in a separate bucket enables access to log information, which can be useful in security and incident response workflows.
+
+
+See https://avd.aquasec.com/misconfig/aws-0163
+────────────────────────────────────────
+ case-10-cloudtrail-validation-disabled/vulnerable.tf:15
+   via case-10-cloudtrail-validation-disabled/vulnerable.tf:14-16 (aws_s3_bucket.logs)
+────────────────────────────────────────
+  14   resource "aws_s3_bucket" "logs" {
+  15 [   bucket = "benchmark-fictional-trail-logs"
+  16   }
+────────────────────────────────────────
+
+
+
+case-11-cloudtrail-no-kms/secure.tf (terraform)
+===============================================
+Tests: 11 (SUCCESSES: 0, FAILURES: 11)
+Failures: 11 (UNKNOWN: 0, LOW: 3, MEDIUM: 2, HIGH: 6, CRITICAL: 0)
+
+AWS-0014 (MEDIUM): Trail is not enabled across all regions.
+════════════════════════════════════════
+Activity could be happening in your account in a different region. When creating Cloudtrail in the AWS Management Console the trail is configured by default to be multi-region, this isn't the case with the Terraform resource. Cloudtrail should cover the full AWS account to ensure you can track changes in regions you are not actively operating in.
+
+
+See https://avd.aquasec.com/misconfig/aws-0014
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/secure.tf:26
+   via case-11-cloudtrail-no-kms/secure.tf:21-27 (aws_cloudtrail.benchmark)
+────────────────────────────────────────
+  21   resource "aws_cloudtrail" "benchmark" {
+  22     name                          = "benchmark-fictional-kms"
+  23     s3_bucket_name                = aws_s3_bucket.logs.id
+  24     kms_key_id                    = aws_kms_key.logs.arn
+  25     include_global_service_events = true
+  26 [   is_multi_region_trail         = false
+  27   }
+────────────────────────────────────────
+
+
+AWS-0016 (HIGH): Trail does not have log validation enabled.
+════════════════════════════════════════
+Illicit activity could be removed from the logs. Log validation should be activated on Cloudtrail logs to prevent the tampering of the underlying data in the S3 bucket. It is feasible that a rogue actor compromising an AWS account might want to modify the log data to remove trace of their actions.
+
+
+See https://avd.aquasec.com/misconfig/aws-0016
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/secure.tf:21-27
+────────────────────────────────────────
+  21 ┌ resource "aws_cloudtrail" "benchmark" {
+  22 │   name                          = "benchmark-fictional-kms"
+  23 │   s3_bucket_name                = aws_s3_bucket.logs.id
+  24 │   kms_key_id                    = aws_kms_key.logs.arn
+  25 │   include_global_service_events = true
+  26 │   is_multi_region_trail         = false
+  27 └ }
+────────────────────────────────────────
+
+
+AWS-0086 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should block public ACLs on buckets and any objects they contain. By blocking, PUTs with fail if the object has any public ACL a.
+
+
+See https://avd.aquasec.com/misconfig/aws-0086
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0087 (HIGH): No public access block so not blocking public policies
+════════════════════════════════════════
+S3 bucket policy should have block public policy to prevent users from putting a policy that enable public access.
+
+
+See https://avd.aquasec.com/misconfig/aws-0087
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0089 (LOW): Bucket has logging disabled
+════════════════════════════════════════
+Ensures S3 bucket logging is enabled for S3 buckets
+
+See https://avd.aquasec.com/misconfig/aws-0089
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0090 (MEDIUM): Bucket does not have versioning enabled
+════════════════════════════════════════
+Versioning in Amazon S3 is a means of keeping multiple variants of an object in the same bucket.
+
+You can use the S3 Versioning feature to preserve, retrieve, and restore every version of every object stored in your buckets.
+
+With versioning you can recover more easily from both unintended user actions and application failures.
+
+When you enable versioning, also keep in mind the potential costs of storing noncurrent versions of objects. To help manage those costs, consider setting up an S3 Lifecycle configuration.
+
+
+See https://avd.aquasec.com/misconfig/aws-0090
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0091 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should ignore public ACLs on buckets and any objects they contain. By ignoring rather than blocking, PUT calls with public ACLs will still be applied but the ACL will be ignored.
+
+
+See https://avd.aquasec.com/misconfig/aws-0091
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0093 (HIGH): No public access block so not restricting public buckets
+════════════════════════════════════════
+S3 buckets should restrict public policies for the bucket. By enabling, the restrict_public_buckets, only the bucket owner and AWS Services can access if it has a public policy.
+
+
+See https://avd.aquasec.com/misconfig/aws-0093
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0094 (LOW): Bucket does not have a corresponding public access block.
+════════════════════════════════════════
+The "block public access" settings in S3 override individual policies that apply to a given bucket, meaning that all public access can be controlled in one central types for that bucket. It is therefore good practice to define these settings for each bucket in order to clearly define the public access that can be allowed for it.
+
+
+See https://avd.aquasec.com/misconfig/aws-0094
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0132 (HIGH): Bucket does not encrypt data with a customer managed key.
+════════════════════════════════════════
+Encryption using AWS keys provides protection for your S3 buckets. To gain greater control over encryption, such as key rotation, access policies, and auditability, use customer managed keys (CMKs) with SSE-KMS.
+Note that SSE-KMS is not supported for S3 server access logging destination buckets; in such cases, use SSE-S3 instead.
+
+
+See https://avd.aquasec.com/misconfig/aws-0132
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/secure.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-trail-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0162 (LOW): Trail does not have CloudWatch logging configured
+════════════════════════════════════════
+Realtime log analysis is not available without enabling CloudWatch logging.
+
+CloudTrail is a web service that records AWS API calls made in a given account. The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, the request parameters, and the response elements returned by the AWS service.
+
+CloudTrail uses Amazon S3 for log file storage and delivery, so log files are stored durably. In addition to capturing CloudTrail logs in a specified Amazon S3 bucket for long-term analysis, you can perform real-time analysis by configuring CloudTrail to send logs to CloudWatch Logs.
+
+For a trail that is enabled in all Regions in an account, CloudTrail sends log files from all those Regions to a CloudWatch Logs log group.
+
+
+See https://avd.aquasec.com/misconfig/aws-0162
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/secure.tf:21-27
+────────────────────────────────────────
+  21 ┌ resource "aws_cloudtrail" "benchmark" {
+  22 │   name                          = "benchmark-fictional-kms"
+  23 │   s3_bucket_name                = aws_s3_bucket.logs.id
+  24 │   kms_key_id                    = aws_kms_key.logs.arn
+  25 │   include_global_service_events = true
+  26 │   is_multi_region_trail         = false
+  27 └ }
+────────────────────────────────────────
+
+
+
+case-11-cloudtrail-no-kms/vulnerable.tf (terraform)
+===================================================
+Tests: 13 (SUCCESSES: 0, FAILURES: 13)
+Failures: 13 (UNKNOWN: 0, LOW: 4, MEDIUM: 2, HIGH: 7, CRITICAL: 0)
+
+AWS-0014 (MEDIUM): Trail is not enabled across all regions.
+════════════════════════════════════════
+Activity could be happening in your account in a different region. When creating Cloudtrail in the AWS Management Console the trail is configured by default to be multi-region, this isn't the case with the Terraform resource. Cloudtrail should cover the full AWS account to ensure you can track changes in regions you are not actively operating in.
+
+
+See https://avd.aquasec.com/misconfig/aws-0014
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/vulnerable.tf:23
+   via case-11-cloudtrail-no-kms/vulnerable.tf:17-24 (aws_cloudtrail.benchmark)
+────────────────────────────────────────
+  17   resource "aws_cloudtrail" "benchmark" {
+  18     name           = "benchmark-fictional-no-kms"
+  19     s3_bucket_name = aws_s3_bucket.logs.id
+  20   
+  21   
+  22     include_global_service_events = true
+  23 [   is_multi_region_trail         = false
+  24   }
+────────────────────────────────────────
+
+
+AWS-0015 (HIGH): CloudTrail does not use a customer managed key to encrypt the logs.
+════════════════════════════════════════
+Using AWS managed keys does not allow for fine grained control.  Using Customer managed keys provides comprehensive control over cryptographic keys, enabling management of policies, permissions, and rotation, thus enhancing security and compliance measures for sensitive data and systems.
+
+
+See https://avd.aquasec.com/misconfig/aws-0015
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/vulnerable.tf:17-24
+────────────────────────────────────────
+  17 ┌ resource "aws_cloudtrail" "benchmark" {
+  18 │   name           = "benchmark-fictional-no-kms"
+  19 │   s3_bucket_name = aws_s3_bucket.logs.id
+  20 │ 
+  21 │ 
+  22 │   include_global_service_events = true
+  23 │   is_multi_region_trail         = false
+  24 └ }
+────────────────────────────────────────
+
+
+AWS-0016 (HIGH): Trail does not have log validation enabled.
+════════════════════════════════════════
+Illicit activity could be removed from the logs. Log validation should be activated on Cloudtrail logs to prevent the tampering of the underlying data in the S3 bucket. It is feasible that a rogue actor compromising an AWS account might want to modify the log data to remove trace of their actions.
+
+
+See https://avd.aquasec.com/misconfig/aws-0016
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/vulnerable.tf:17-24
+────────────────────────────────────────
+  17 ┌ resource "aws_cloudtrail" "benchmark" {
+  18 │   name           = "benchmark-fictional-no-kms"
+  19 │   s3_bucket_name = aws_s3_bucket.logs.id
+  20 │ 
+  21 │ 
+  22 │   include_global_service_events = true
+  23 │   is_multi_region_trail         = false
+  24 └ }
+────────────────────────────────────────
+
+
+AWS-0086 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should block public ACLs on buckets and any objects they contain. By blocking, PUTs with fail if the object has any public ACL a.
+
+
+See https://avd.aquasec.com/misconfig/aws-0086
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-no-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0087 (HIGH): No public access block so not blocking public policies
+════════════════════════════════════════
+S3 bucket policy should have block public policy to prevent users from putting a policy that enable public access.
+
+
+See https://avd.aquasec.com/misconfig/aws-0087
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-no-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0089 (LOW): Bucket has logging disabled
+════════════════════════════════════════
+Ensures S3 bucket logging is enabled for S3 buckets
+
+See https://avd.aquasec.com/misconfig/aws-0089
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-no-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0090 (MEDIUM): Bucket does not have versioning enabled
+════════════════════════════════════════
+Versioning in Amazon S3 is a means of keeping multiple variants of an object in the same bucket.
+
+You can use the S3 Versioning feature to preserve, retrieve, and restore every version of every object stored in your buckets.
+
+With versioning you can recover more easily from both unintended user actions and application failures.
+
+When you enable versioning, also keep in mind the potential costs of storing noncurrent versions of objects. To help manage those costs, consider setting up an S3 Lifecycle configuration.
+
+
+See https://avd.aquasec.com/misconfig/aws-0090
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-no-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0091 (HIGH): No public access block so not blocking public acls
+════════════════════════════════════════
+S3 buckets should ignore public ACLs on buckets and any objects they contain. By ignoring rather than blocking, PUT calls with public ACLs will still be applied but the ACL will be ignored.
+
+
+See https://avd.aquasec.com/misconfig/aws-0091
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-no-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0093 (HIGH): No public access block so not restricting public buckets
+════════════════════════════════════════
+S3 buckets should restrict public policies for the bucket. By enabling, the restrict_public_buckets, only the bucket owner and AWS Services can access if it has a public policy.
+
+
+See https://avd.aquasec.com/misconfig/aws-0093
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-no-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0094 (LOW): Bucket does not have a corresponding public access block.
+════════════════════════════════════════
+The "block public access" settings in S3 override individual policies that apply to a given bucket, meaning that all public access can be controlled in one central types for that bucket. It is therefore good practice to define these settings for each bucket in order to clearly define the public access that can be allowed for it.
+
+
+See https://avd.aquasec.com/misconfig/aws-0094
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-no-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0132 (HIGH): Bucket does not encrypt data with a customer managed key.
+════════════════════════════════════════
+Encryption using AWS keys provides protection for your S3 buckets. To gain greater control over encryption, such as key rotation, access policies, and auditability, use customer managed keys (CMKs) with SSE-KMS.
+Note that SSE-KMS is not supported for S3 server access logging destination buckets; in such cases, use SSE-S3 instead.
+
+
+See https://avd.aquasec.com/misconfig/aws-0132
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/vulnerable.tf:14-16
+────────────────────────────────────────
+  14 ┌ resource "aws_s3_bucket" "logs" {
+  15 │   bucket = "benchmark-fictional-no-kms-logs"
+  16 └ }
+────────────────────────────────────────
+
+
+AWS-0162 (LOW): Trail does not have CloudWatch logging configured
+════════════════════════════════════════
+Realtime log analysis is not available without enabling CloudWatch logging.
+
+CloudTrail is a web service that records AWS API calls made in a given account. The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, the request parameters, and the response elements returned by the AWS service.
+
+CloudTrail uses Amazon S3 for log file storage and delivery, so log files are stored durably. In addition to capturing CloudTrail logs in a specified Amazon S3 bucket for long-term analysis, you can perform real-time analysis by configuring CloudTrail to send logs to CloudWatch Logs.
+
+For a trail that is enabled in all Regions in an account, CloudTrail sends log files from all those Regions to a CloudWatch Logs log group.
+
+
+See https://avd.aquasec.com/misconfig/aws-0162
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/vulnerable.tf:17-24
+────────────────────────────────────────
+  17 ┌ resource "aws_cloudtrail" "benchmark" {
+  18 │   name           = "benchmark-fictional-no-kms"
+  19 │   s3_bucket_name = aws_s3_bucket.logs.id
+  20 │ 
+  21 │ 
+  22 │   include_global_service_events = true
+  23 │   is_multi_region_trail         = false
+  24 └ }
+────────────────────────────────────────
+
+
+AWS-0163 (LOW): Trail S3 bucket does not have logging enabled
+════════════════════════════════════════
+Amazon S3 bucket access logging generates a log that contains access records for each request made to your S3 bucket. An access log record contains details about the request, such as the request type, the resources specified in the request worked, and the time and date the request was processed.
+CIS recommends that you enable bucket access logging on the CloudTrail S3 bucket.
+By enabling S3 bucket logging on target S3 buckets, you can capture all events that might affect objects in a target bucket. Configuring logs to be placed in a separate bucket enables access to log information, which can be useful in security and incident response workflows.
+
+
+See https://avd.aquasec.com/misconfig/aws-0163
+────────────────────────────────────────
+ case-11-cloudtrail-no-kms/vulnerable.tf:15
+   via case-11-cloudtrail-no-kms/vulnerable.tf:14-16 (aws_s3_bucket.logs)
+────────────────────────────────────────
+  14   resource "aws_s3_bucket" "logs" {
+  15 [   bucket = "benchmark-fictional-no-kms-logs"
+  16   }
+────────────────────────────────────────
+
+
+
+case-12-kms-rotation-disabled/vulnerable.tf (terraform)
+=======================================================
+Tests: 1 (SUCCESSES: 0, FAILURES: 1)
+Failures: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
+AWS-0065 (MEDIUM): Key does not have rotation enabled.
+════════════════════════════════════════
+You should configure your KMS keys to auto rotate to maintain security and defend against compromise.
+
+
+See https://avd.aquasec.com/misconfig/aws-0065
+────────────────────────────────────────
+ case-12-kms-rotation-disabled/vulnerable.tf:16
+   via case-12-kms-rotation-disabled/vulnerable.tf:14-17 (aws_kms_key.benchmark)
+────────────────────────────────────────
+  14   resource "aws_kms_key" "benchmark" {
+  15     description         = "Fictional benchmark key"
+  16 [   enable_key_rotation = false
+  17   }
+────────────────────────────────────────
+
+
